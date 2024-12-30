@@ -59,10 +59,9 @@ a:hover {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 8rem auto;
   padding: 0 1rem;
   max-width: 1200px;
-  margin-top: 70px;
   min-height: 100vh;
 }
 
