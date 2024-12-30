@@ -1,11 +1,15 @@
 ---
-const { currentCategory = "Category", currentPage = "Page" } = Astro.props;
+const { currentCategory = "Category", currentPage = "" } = Astro.props;
 
 const pages = [
   { name: "Top", href: "/" },
   { name: currentCategory, href: `/${currentCategory}` },
-  { name: currentPage, href: `/${currentCategory}/${currentPage}` },
 ];
+
+// currentPageが空でない場合にのみページを追加
+if (currentPage) {
+  pages.push({ name: currentPage, href: `/${currentCategory}/${currentPage}` });
+}
 ---
 
 <nav>
