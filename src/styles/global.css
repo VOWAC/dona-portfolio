@@ -10,6 +10,7 @@
 
 html {
   font-size: 16px;
+
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Sawarabi Mincho', serif;
+  
 }
 
 h1 {
@@ -61,6 +63,7 @@ a:hover {
   padding: 0 1rem;
   max-width: 1200px;
   margin-top: 70px;
+  min-height: 100vh;
 }
 
 .star-background{
