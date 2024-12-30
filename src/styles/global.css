@@ -2,7 +2,7 @@
   --font-primary: 'Sawarabi Mincho', serif;
   --color-text-primary: #0f1d3e;
   --color-secondary: #b9a0cb;
-  --background-image: url('/images/background.jpg'); 
+  --background-image: url('/images/background.png'); 
   --color-link: #004492;
   --color-link-hover: #0077ff;
 }
@@ -39,6 +39,10 @@ h3 {
 p {
   font-size: 1rem;
   margin: 0;
+}
+
+small {
+  font-size: 0.8rem;
 }
 
 a {
