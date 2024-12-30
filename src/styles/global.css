@@ -1,8 +1,18 @@
+:root {
+  --font-primary: 'Sawarabi Mincho', serif;
+  --color-text-primary: #0f1d3e;
+  --color-secondary: #b9a0cb;
+  --background-image: url('/images/background.jpg'); 
+  --color-link: #004492;
+  --color-link-hover: #0077ff;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
+  color: var(--color-text-primary);
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.02em; 
@@ -31,10 +41,28 @@ p {
   margin: 0;
 }
 
+a {
+  color: var(--color-link);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
 .container {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 1200px;
+}
+
+.starbackground{
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 /* --- レスポンシブ対応 --- */
