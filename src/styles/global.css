@@ -44,6 +44,7 @@ p {
 a {
   color: var(--color-link);
   transition: color 0.3s;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -56,7 +57,7 @@ a:hover {
   max-width: 1200px;
 }
 
-.starbackground{
+.star-background{
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
