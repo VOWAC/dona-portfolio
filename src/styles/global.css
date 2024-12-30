@@ -3,6 +3,7 @@
   --color-text-primary: #0f1d3e;
   --color-secondary: #b9a0cb;
   --background-image: url('/images/background.png'); 
+  --background-image-light: url('/images/background-light.png'); 
   --color-link: #004492;
   --color-link-hover: #0077ff;
 }
@@ -69,6 +70,15 @@ a:hover {
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: white;
+}
+
+.star-background-light{
+  background-image: var(--background-image-light);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--color-text-primary);
 }
 
 /* --- レスポンシブ対応 --- */

@@ -1,5 +1,27 @@
+---
+const { currentPage } = Astro.props;
+---
+
 <header>
   <h1>KanaiYukiha's Portfolio</h1>
+  <nav>
+    <ul>
+      <li><a href="/">Top</a></li>
+      <li>
+        <a
+          href="/about"
+          class={currentPage === "about" ? "star-background-light active" : ""}
+          >About</a>
+      </li>
+      <li>
+        <a
+          href="/works"
+          class={currentPage === "works" ? "star-background-light active" : ""}
+          >Works</a>
+      </li>
+      <li><a href="https://github.com/VOWAC">GitHub</a></li>
+    </ul>
+  </nav>
 </header>
 
 <style>
@@ -10,13 +32,42 @@
     top: 0;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
     h1 {
-      background-image: var(--background-image);
+      background-image: var(--background-image-light);
       background-size: cover;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       filter: brightness(2);
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 2rem;
+      li {
+        a {
+          text-decoration: none;
+          color: var(--font-color);
+          font-size: 0.9rem;     
+        }
+        &:hover{
+          a {
+            color: var(--color-secondary);
+          }
+        }
+        a.active {
+          color: #fff;
+          font-size: 1.2rem;
+          font-weight: bold;
+          padding: 0.2rem 1rem;
+        }
+        
+      }
     }
   }
 </style>
