@@ -1,0 +1,68 @@
+---
+import Button from "@components/Button.astro";
+
+type WorksCardProps = {
+  title: string;
+  shortDescription: string;
+  thumbnail: string;
+  tags: string[];
+  link: string;
+};
+
+const { title, shortDescription, thumbnail, tags, link } = Astro.props as WorksCardProps;
+---
+
+<section class="work">
+  <img src={thumbnail} alt="カピバラブログのサムネイル" />
+  <div class="right-contents">
+    <h2>{title}</h2>
+    <div class="description">
+      <p>{shortDescription}</p>
+      <small>
+        {tags.map((tag) => <span>{tag}</span>)}
+      </small>
+    </div>
+    <Button link=`/works/${link}`>詳細を見る</Button>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 990px;
+    img {
+      width: 440px;
+      height: 278px;
+      object-fit: cover;
+    }
+    .right-contents {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      gap: 2rem;
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        small {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+          opacity: 0.5;
+          span {
+            color: var(--font-color);
+            &:not(:last-child)::after {
+              content: "/";
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
