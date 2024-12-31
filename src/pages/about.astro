@@ -14,7 +14,21 @@ import Layout from "@layouts/Layout.astro";
     <div class="about-contents">
       <!-- leftcontent -->
       <div class="left-content">
-        <img src="/images/avatar.png" alt="" class="avatar" />
+        <div class="animation-wrapper">
+          <img src="/images/about/dona_1.png" alt="本体" class="part part-1" />
+          <img
+            src="/images/about/dona_monitor.png"
+            alt="モニター"
+            class="part part-2"
+          />
+          <img src="/images/about/dona_pc.png" alt="pc" class="part part-3" />
+          <img
+            src="/images/about/dona_space.png"
+            alt="宇宙"
+            class="part part-4"
+          />
+          <img src="/images/about/dona_star.png" alt="星" class="part part-5" />
+        </div>
       </div>
       <!-- rightcontent -->
       <div class="right-content">
@@ -139,11 +153,11 @@ import Layout from "@layouts/Layout.astro";
         width: 50%;
       }
       .left-content {
-        max-width: 350px;
+        max-width: 500px;
+        height: 700px;
         position: fixed;
-        top: 250px;
+        top: 200px;
         left: 15%;
-        height: auto;
         img.avatar {
           object-fit: cover;
           width: 100%;
@@ -236,11 +250,97 @@ import Layout from "@layouts/Layout.astro";
   }
 
   @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
   }
-  50% {
-    transform: translateY(-15px);
+  .animation-wrapper {
+    position: relative;
+    width: 500px;
+    height: 1000px;
+    overflow: hidden;
   }
-}
+
+  .part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .part-1 {
+    z-index: 1;
+    animation: move-body 8s ease-in-out infinite;
+  }
+  .part-2 {
+    z-index: 4;
+    animation: move-monitor 6s ease-in-out infinite;
+  }
+  .part-3 {
+    z-index: 3;
+    animation: move-pc 7s ease-in-out infinite;
+  }
+  .part-4 {
+    z-index: 2;
+    animation: move-space 7.5s ease-in-out infinite;
+  }
+  .part-5 {
+    z-index: 5;
+    animation: move-stars 6.5s ease-in-out infinite;
+  }
+
+  @keyframes move-body {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-10px) translateY(10px);
+    }
+  }
+
+  @keyframes move-monitor {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes move-pc {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+
+  @keyframes move-stars {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(30px) translateY(-10px);
+    }
+  }
+
+  @keyframes move-space {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
 </style>
