@@ -1,8 +1,8 @@
 ---
-const { link } = Astro.props;
+const { link, light } = Astro.props;
 ---
 
-<a href={link} class="button">
+<a href={link} class={light ? "button light" : "button dark"}>
   <span>
     <slot />
   </span>
@@ -36,10 +36,15 @@ const { link } = Astro.props;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.25s ease-in-out;
     -webkit-clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.25s ease-in-out, -webkit-clip-path 0.25s ease-in-out;
+    transition:
+      clip-path 0.25s ease-in-out,
+      -webkit-clip-path 0.25s ease-in-out;
     z-index: 0;
   }
-
+  a.button.light:after {
+    background-image: var(--background-image-light);
+  }
+  
   a.button:hover:after {
     clip-path: inset(0 0 0 0);
     -webkit-clip-path: inset(0 0 0 0);

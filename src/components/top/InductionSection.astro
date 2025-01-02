@@ -1,0 +1,28 @@
+---
+import Button from "@components/Button.astro";
+
+const { id, title, desc, buttonText, link } = Astro.props;
+---
+
+<section id={id}>
+  <h2>{title}</h2>
+  <p>{desc}</p>
+  <Button light link={link}>{buttonText}</Button>
+</section>
+
+<style>
+  section {
+    height: 100vh;
+    white-space: pre;
+    padding-right: 3rem;
+  }
+
+  h2{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    letter-spacing: 0.1rem;
+    margin-bottom: 4rem;
+  }
+</style>

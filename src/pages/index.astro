@@ -1,11 +1,144 @@
 ---
+import TopSection from "@components/top/TopSection.astro";
+import ContactSection from "@components/top/ContactSection.astro";
 import Layout from "@layouts/Layout.astro";
+import InductionSection from "@components/top/InductionSection.astro";
 ---
 
 <Layout>
-  <!-- HeroSection -->
-  <!-- AboutSection -->
-  <!-- WorksSection -->
-  <!-- ContactSection -->
-  <!-- Footer -->
+  <div class="main">
+    <img src="/images/dona_main.png" alt="main" />
+    <svg class="arrows">
+      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+      <path class="a2" d="M0 20 L30 52 L60 20"></path>
+      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    </svg>
+  </div>
+  <div class="scroll-content">
+    <TopSection />
+    <InductionSection
+      id="about"
+      title="金井雪華（かないゆきは）と、申します。"
+      desc="デザインとエンジニアリングを学んでいる専門学生です。\nデザインと技術の力を組み合わせ、課題解決に貢献できるエンジニアを目指しています。\nこれまでの学びの中で感じたこと、これからの挑戦への思いをプロフィールにまとめています。\nぜひご覧ください。"
+      buttonText="プロフィールをみる"
+      link="/about"
+    />
+    <InductionSection
+      id="works"
+      title="作り上げたものたち"
+      desc="これまで学び、挑戦してきた成果の一部です。\n未熟な点もありますが、一つ一つ丁寧に取り組んできました。\nぜひご覧ください。"
+      buttonText="制作物をみる"
+      link="/works"
+    />
+  </div>
+  <ContactSection />
 </Layout>
+
+<style>
+  section {
+    height: 100vh;
+  }
+  .main {
+    position: fixed;
+    width: 100%;
+    height: 130vh;
+    overflow: hidden;
+  }
+
+  .main img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 15% center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+
+  .main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .scroll-content {
+    width: 50%;
+    margin-left: auto;
+    top: 25vh;
+    padding: 3rem;
+    color: white;
+    position: relative;
+    display: block;
+  }
+
+  .arrows {
+    width: 60px;
+    height: 72px;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    margin: 0;
+    z-index: 10;
+  }
+
+  .arrows path {
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+  }
+
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+  }
+
+  .arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+  }
+
+  .arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+  }
+</style>
