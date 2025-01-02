@@ -146,118 +146,22 @@ import Layout from "@layouts/Layout.astro";
 <style>
   .container {
     overflow: hidden;
-    .about-contents {
-      display: flex;
-      justify-content: space-between;
-      .left-content {
-        width: 50%;
-      }
-      .left-content {
-        max-width: 500px;
-        height: 700px;
-        position: fixed;
-        top: 200px;
-        left: 15%;
-        img.avatar {
-          object-fit: cover;
-          width: 100%;
-          animation: float 8s ease-in-out infinite;
-          height: auto;
-        }
-        overflow-y: hidden;
-      }
-      .right-content {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 580px;
-        gap: 3rem;
-        overflow-y: auto;
-        margin-left: 50%;
-        h3 {
-          margin-bottom: 0;
-        }
-        h2 {
-          span {
-            font-size: 1.5rem;
-            margin-left: 1rem;
-          }
-        }
-        h3 {
-          margin-bottom: 2rem;
-        }
-        .career {
-          .timeline {
-            width: 100%;
-            border-collapse: collapse;
-            display: inline-flex;
-            flex-direction: column;
-            position: relative;
-            background: url("/images/arrow.png") center no-repeat;
-            background-size: contain;
-            background-position: left 15% center;
-          }
-        }
-        .skill {
-          display: inline-flex;
-          flex-direction: column;
-          gap: 3rem;
-          .skill-title {
-            margin-bottom: 0;
-          }
-          .set {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            padding: 2rem 3rem;
-            background-color: aliceblue;
-            border-radius: 20px;
-            .title {
-              font-size: 1.2rem;
-              font-weight: bold;
-              margin-bottom: 1rem;
-            }
-            .explanation {
-              font-size: 0.9rem;
-              margin-bottom: 1rem;
-              opacity: 0.5;
-            }
-            .skill-set-items {
-              display: inline-flex;
-              justify-items: center;
-              gap: 2rem;
-              .skill-set-item {
-                .title {
-                  font-size: 1rem;
-                  margin-bottom: 1rem;
-                  text-align: center;
-                }
-              }
-            }
-          }
-          .discription {
-            margin-bottom: 2rem;
-            .title {
-              font-size: 1.2rem;
-              font-weight: bold;
-              margin-bottom: 1rem;
-            }
-          }
-        }
-      }
-    }
+  }
+  .about-contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-content {
+    width: 50%;
+    max-width: 500px;
+    height: 700px;
+    position: fixed;
+    top: 200px;
+    left: 15%;
+
+    overflow-y: hidden;
   }
 
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
   .animation-wrapper {
     position: relative;
     width: 500px;
@@ -320,7 +224,7 @@ import Layout from "@layouts/Layout.astro";
       transform: rotate(0);
     }
     50% {
-      transform: rotate(5deg);
+      transform: rotate(7deg);
     }
   }
 
@@ -342,5 +246,79 @@ import Layout from "@layouts/Layout.astro";
     50% {
       transform: translateX(10px);
     }
+  }
+
+  .right-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 580px;
+    gap: 3rem;
+    overflow-y: auto;
+    margin-left: 50%;
+  }
+  .right-content h3 {
+    margin-bottom: 2rem;
+  }
+  .right-content h2 span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  .right-content .career .timeline {
+    width: 100%;
+    border-collapse: collapse;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    background: url("/images/arrow.png") center no-repeat;
+    background-size: contain;
+    background-position: left 15% center;
+  }
+
+  .skill {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .slill .skill-title {
+    margin-bottom: 0;
+  }
+
+  .skill .set {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    background-color: aliceblue;
+    border-radius: 20px;
+  }
+  .skill .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .explanation {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  .skill-set-items {
+    display: inline-flex;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .skill-set-item .title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .skill .discription {
+    margin-bottom: 2rem;
+  }
+  .skill .discription .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
   }
 </style>

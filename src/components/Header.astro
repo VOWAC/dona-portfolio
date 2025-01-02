@@ -11,13 +11,15 @@ const { currentPage } = Astro.props;
         <a
           href="/about"
           class={currentPage === "about" ? "star-background-light active" : ""}
-          >About</a>
+          >About</a
+        >
       </li>
       <li>
         <a
           href="/works"
           class={currentPage === "works" ? "star-background-light active" : ""}
-          >Works</a>
+          >Works</a
+        >
       </li>
       <li><a href="https://github.com/VOWAC" target="_blank">GitHub</a></li>
     </ul>
@@ -32,43 +34,42 @@ const { currentPage } = Astro.props;
     top: 0;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
     z-index: 999;
-    h1 {
-      background-image: var(--background-image-light);
-      background-size: cover;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      filter: brightness(2);
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 2rem;
-      li {
-        a {
-          text-decoration: none;
-          color: var(--font-color);
-          font-size: 0.9rem;     
-        }
-        &:hover{
-          a {
-            color: var(--color-secondary);
-          }
-        }
-        a.active {
-          color: #fff;
-          font-size: 1.2rem;
-          font-weight: bold;
-          padding: 0.2rem 1rem;
-        }
-        
-      }
-    }
+  }
+  h1 {
+    background-image: var(--background-image-light);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(2);
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 0.9rem;
+  }
+
+  nav ul li a:hover {
+    color: var(--color-secondary);
+  }
+
+  nav ul li a.active {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 1rem;
   }
 </style>
