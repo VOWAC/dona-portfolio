@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "name": "カピバラブログ",
+    "shortDescription": "友人の個人ブログサイト",
+    "tags": ["個人開発", "デザイン", "コーディング"],
+    "link": "capybara-blog",
+    "url": "https://capybara-blog-flame.vercel.app/",
+    "github": "https://github.com/VOWAC/capybara-blog-app",
+    "thumbnail": "/images/works/capybara-blog.png",
+    "details": [
+      {
+        "title": "プロジェクト概要",
+        "description": "友人のために制作した個人ブログサイトです。"
+      },
+      {
+        "title": "制作の背景と目的",
+        "description": "友人から「個人ブログを作成したい」と依頼を受けたことがきっかけです。最低限の要件として、「自分が書き込めること」と「新着順に並べられること」を満たしています。"
+      },
+      {
+        "title": "技術スタック",
+        "description": "デザイン: Figma、コーディング: TypeScript, Next.js、データベース: Supabase、デプロイ: Vercel。Astro.jsも検討しましたが、ユーザーが頻繁に操作することを考慮し、Next.jsを採用しました。"
+      },
+      {
+        "title": "成功したポイント",
+        "description": "スムーズなスクロールの実装に成功し、画像を効果的に表示するレイアウトを最適化しました。"
+      },
+      {
+        "title": "成長と学び",
+        "description": "動的ルーティングの仕組みを習得し、今後のプロジェクトで活用できるようになりました。また、シンプルで柔らかい雰囲気を持つデザインのコツを掴むことができました。"
+      },
+      {
+        "title": "課題とこれから",
+        "description": "サイト全体が重くなりがちなため、さらなるパフォーマンスの改善が必要です。また、ファビコンやローディング画面、404画面の作成と、記事をファイル分けする機能の実装も課題としています。"
+      },
+      {
+        "title": "制作期間",
+        "description": "約3週間です。"
+      },
+      {
+        "title": "作品に対して",
+        "description": "友人が実際にこのブログを利用している姿を見て、とても嬉しく感じました。"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "AtoriE",
+    "shortDescription": "「冬隣あとり」のイラスト作品展",
+    "tags": ["個人開発", "デザイン", "コーディング"],
+    "link": "atori-e",
+    "url": "https://atorie.netlify.app/",
+    "github": "https://github.com/VOWAC/AtoriE",
+    "thumbnail": "/images/works/atorie.png",
+    "details": [
+      {
+        "title": "プロジェクト概要",
+        "description": "「AtoriE」は、趣味であるイラストを固定で展示するための作品展として制作しました。名前は「冬隣あとり」という名義と「絵」、さらに「工房」を意味する「アトリエ」を組み合わせたものです。"
+      },
+      {
+        "title": "制作の背景と目的",
+        "description": "これまでたくさん絵を描いてきたものの、固定で掲載できる場所がありませんでした。その課題を解決するため、自分専用の作品置き場として立ち上げました。"
+      },
+      {
+        "title": "技術スタック",
+        "description": "デザイン: Figma、フロントエンド: Astro.js, TypeScript、データベース: Supabase、デプロイ: Netlify。Next.jsも検討しましたが、軽量かつ高速な構成を選ぶため、Astro.jsを採用しました。"
+      },
+      {
+        "title": "成功したポイント",
+        "description": "滑らかなスクロールの実装に成功し、閲覧体験を向上させました。また、メイソンリーレイアウトを用いて、絵を魅力的に配置しました。"
+      },
+      {
+        "title": "成長と学び",
+        "description": "JavaScriptをレイアウトに活用することへの抵抗がなくなり、スクリプトとレイアウトの調整に慣れました。"
+      },
+      {
+        "title": "課題",
+        "description": "Google以外のブラウザでレイアウトが崩れることがあり、特にSafariでの調整が課題となっています。また、さらなる改善が必要です。"
+      },
+      {
+        "title": "制作期間",
+        "description": "約2週間の稼働期間ですが、計画や一時停止を含めると2か月程度かかりました。"
+      },
+      {
+        "title": "作品に対して",
+        "description": "「AtoriE」は、私が描いたイラストをより魅力的に見せるための特別な空間です。試行錯誤しながら、絵を最大限に引き立てるデザインを目指しました。"
+      }
+    ],
+    "designScreenshots": "/images/works/atorie-design.png",
+    "designChanges": [
+      {
+        "change": "ハンバーガーメニューの削除",
+        "designConcept": "他のギャラリーページへのアクセスを容易にするため、ハンバーガーメニューを用意していました。",
+        "implementationChanges": "ギャラリーごとの内容に集中してほしいという意図から、ハンバーガーメニューを削除し、下部に他のページへのリンクを設置しました。",
+        "reason": "各ギャラリーを深く楽しんでもらうための配慮です。"
+      },
+      {
+        "change": "詳細ページの情報追加",
+        "designConcept": "絵を一覧で表示するシンプルなレイアウトを想定していました。",
+        "implementationChanges": "絵の詳細ページにタイトルや概要を追加し、合作の場合には合作相手のリンクも掲載しました。",
+        "reason": "各作品の背景や意味を伝えることで、より深い鑑賞体験を提供したいと考えたためです。"
+      }
+    ]
+  },
+ {
+      "id": 3,
+      "name": "案内サイト",
+      "shortDescription": "TCA東京ECO動物海洋専門学校文化祭のフロアの案内サイト",
+      "tags": ["チーム開発", "デザイン"],
+      "link": "tca-eco-school-festival",
+      "url": "https://tca-eco-school-festival.vercel.app/?v=1",
+      "thumbnail": "/images/works/tca-eco-school-festival.png",
+      "details": [
+        {
+          "title": "プロジェクト概要",
+          "description": "TCA東京ECO動物海洋専門学校文化祭のフロア案内サイトを制作しました。来場者が学校内の各展示フロアをスムーズに把握できることを目的としています。"
+        },
+        {
+          "title": "制作の背景と目的",
+          "description": "文化祭を訪れる来場者が効率よくフロアを巡るため、デザインと利便性に配慮した案内サイトを提案・制作しました。"
+        },
+        {
+          "title": "担当した部分の技術スタック",
+          "description": "デザイン: Figma"
+        },
+        {
+          "title": "成長と学び",
+          "description": "文化祭の案内サイトでは、依頼者とのやり取りを重ねて具体的なフィードバックを受ける経験を初めてしました。要望を形にし、柔軟に対応する力が求められたことで、クライアントとの連携の重要性を学びました。"
+        }
+      ],
+      "designScreenshots": "/images/works/tca-eco-school-festival-design.png",
+      "designChanges": []
+    },
+    {
+      "id": 3,
+      "name": "案内サイト",
+      "shortDescription": "TCA東京ECO動物海洋専門学校文化祭のフロアの案内サイト",
+      "tags": ["チーム開発", "デザイン"],
+      "link": "tca-eco-school-festival",
+      "url": "https://tca-eco-school-festival.vercel.app/?v=1",
+      "thumbnail": "/images/works/tca-eco-school-festival.png",
+      "details": [
+        {
+          "title": "プロジェクト概要",
+          "description": "TCA東京ECO動物海洋専門学校文化祭のフロア案内サイトを制作しました。来場者が学校内の各展示フロアをスムーズに把握できることを目的としています。"
+        },
+        {
+          "title": "制作の背景と目的",
+          "description": "文化祭を訪れる来場者が効率よくフロアを巡るため、デザインと利便性に配慮した案内サイトを提案・制作しました。"
+        },
+        {
+          "title": "担当した部分の技術スタック",
+          "description": "デザイン: Figma"
+        },
+        {
+          "title": "成長と学び",
+          "description": "文化祭の案内サイトでは、依頼者とのやり取りを重ね、具体的なフィードバックを受ける経験を初めてしました。要望を形にし、柔軟に対応する力が求められたことで、クライアントとの連携の重要性を学びました。"
+        }
+      ],
+      "designScreenshots": "/images/works/tca-eco-school-festival-design.png",
+      "designChanges": []
+    },
+    {
+      "id": 4,
+      "name": "ポートフォリオ",
+      "shortDescription": "DONAのポートフォリオサイト",
+      "tags": ["個人開発", "デザイン", "コーディング"],
+      "link": "portfolio",
+      "url": "https://atorie.netlify.app/",
+      "github": "",
+      "thumbnail": "/images/works/portfolio.png",
+      "details": [
+        {
+          "title": "プロジェクト概要",
+          "description": "自己紹介と作品を掲載するためのポートフォリオサイトです。"
+        },
+        {
+          "title": "制作の背景と目的",
+          "description": "自身のスキルや制作物をアピールするため、ポートフォリオサイトを制作しました。"
+        },
+        {
+          "title": "技術スタック",
+          "description": "デザイン: Figma、コーディング: TypeScript, Astro.js、デプロイ: Netlify"
+        },
+        {
+          "title": "ポートフォリオのテーマ",
+          "description": "テーマは星空で、無数のアイディアを星々に見立てて表現しました。自分の好きな世界観をデザインに落とし込み、個性を感じられる仕上がりを目指しました。"
+        },
+        {
+          "title": "成長と学び",
+          "description": "デザイン全体に統一感を持たせることの重要性を学び、今後の制作にも活かしていきたいと考えています。"
+        },
+        {
+          "title": "課題",
+          "description": "デザイン要素の微調整や、コードの再利用性を高める取り組みが課題として残っています。"
+        },
+        {
+          "title": "制作期間",
+          "description": "約1週間です。"
+        },
+        {
+          "title": "作品に対して",
+          "description": "自分のスキルや作品を視覚的にアピールできる場を持てたことは大きな成果です。今後も継続的に更新し、自身の成長を反映していきたいです。"
+        }
+      ]
+    }
+    
+]
