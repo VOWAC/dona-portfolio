@@ -1,0 +1,59 @@
+---
+const { date, title, description, arrow } = Astro.props;
+---
+
+<tbody>
+  <tr>
+    <td class="date">
+      <p>{date}</p>
+    </td>
+    {arrow && <td class="arrow" rowspan="5" />}
+    <td class="event">
+      <p class="title">
+        {title}
+      </p>
+      <p class="description">
+        {description}
+      </p>
+    </td>
+  </tr>
+</tbody>
+
+<style>
+  tbody {
+    margin-bottom: 1.5rem;
+  }
+  .date {
+    width: 10%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-flex;
+    white-space: pre-wrap;
+  }
+
+  .event {
+    width: 75%;
+    text-align: left;
+  }
+  .title {
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-flex;
+
+  }
+  .description {
+    font-size: 0.9rem;
+    margin-left: 2rem;
+    display: inline-flex;
+    white-space: pre-wrap;
+    text-align: left;
+  }
+
+  /* レスポンシブ */
+  @media (max-width: 1024px) {
+    .date {
+      opacity: 0.5;
+      width: 30%;
+    }
+  }
+</style>

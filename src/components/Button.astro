@@ -1,0 +1,58 @@
+---
+const { link, light } = Astro.props;
+---
+
+<a href={link} class={light ? "button light" : "button dark"}>
+  <span>
+    <slot />
+  </span>
+</a>
+
+<style>
+  a.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    width: 286px;
+    height: 58px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  a.button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.25s ease-in-out;
+    -webkit-clip-path: inset(0 100% 0 0);
+    transition:
+      clip-path 0.25s ease-in-out,
+      -webkit-clip-path 0.25s ease-in-out;
+    z-index: 0;
+  }
+  a.button.light:after {
+    background-image: var(--background-image-light);
+  }
+  
+  a.button:hover:after {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+    z-index: 1;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+</style>

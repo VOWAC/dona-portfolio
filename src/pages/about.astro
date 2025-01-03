@@ -1,0 +1,392 @@
+---
+import Breadcrumb from "@components/Breadcrumb.astro";
+import Button from "@components/Button.astro";
+import Header from "@components/Header.astro";
+import SkillSetItem from "@components/about/SkillSetItem.astro";
+import TimelineItem from "@components/about/TimelineItem.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout>
+  <Header currentPage="about" />
+  <div class="container">
+    <Breadcrumb currentCategory="about" currentPage="" />
+    <div class="about-contents">
+      <!-- leftcontent -->
+      <div class="left-content">
+        <div class="animation-wrapper">
+          <img src="/images/about/dona_1.png" alt="本体" class="part part-1" />
+          <img
+            src="/images/about/dona_monitor.png"
+            alt="モニター"
+            class="part part-2"
+          />
+          <img src="/images/about/dona_pc.png" alt="pc" class="part part-3" />
+          <img
+            src="/images/about/dona_space.png"
+            alt="宇宙"
+            class="part part-4"
+          />
+          <img src="/images/about/dona_star.png" alt="星" class="part part-5" />
+        </div>
+      </div>
+      <!-- rightcontent -->
+      <div class="right-content">
+        <!-- name -->
+        <h2>DONA<span class="ruby">(金井雪華)</span></h2>
+        <!-- description -->
+        <div class="description">
+          <p>
+            20歳。栃木県出身です。<br
+            />現在、東京デザインテクノロジーセンター専門学校スーパーIT科の3年生として、Webデザインやエンジニアリングを中心に学んでいます。日々の学びを通じて、デザインと技術の力で価値あるものを形にする方法を探求しています。<br
+            />
+            <br />
+            趣味はイラストや映像制作で、どちらも自己表現の手段として楽しんでいます。物語性や感情を込めた作品作りを大切にしており、その経験がデザインやエンジニアリングにも良い影響を与えていると感じています。
+            『表現することが好き』という思いを軸に、デザインと技術の両面で自分の可能性を広げていきたいと考えています。
+          </p>
+        </div>
+        <!-- visionsection -->
+        <div class="vision">
+          <h3>デザインと技術の両視点で価値を創りたい</h3>
+          <p>
+            私が目指すのは、デザインと技術の両視点から価値あるものを形にできるデザインエンジニアです。<br
+            />
+            デザイナーとエンジニアの間にある齟齬を解消し、意図を正確に形にするだけでなく、スピーディーで高精度なプロトタイピングを通じて、チーム全体の価値を向上させていきたいと考えています。<br
+            />
+            <br />
+            また、私にとってデザインは、色や形、動きでユーザーと会話するコミュニケーションの手段であり、技術はそれを形にする表現力です。両者を融合させることで、心に響く体験を生み出していきたいと考えています。
+          </p>
+        </div>
+        <!-- careersection -->
+        <div class="career">
+          <h3>経歴</h3>
+          <table class="timeline">
+            <TimelineItem
+              date="2022/04\n〜\n現在"
+              title="東京デザインテクノロジーセンター専門学校スーパーIT科入学"
+              description="本格的にIT知識やアルゴリズム、webデザインを学び始める。色々な言語に触れていく中で、webのフロントエンドに興味を持ち、Web制作、開発やデザイン、UI/UXを中心に学んでいる。"
+              arrow
+            />
+            <TimelineItem
+              date="2022/12\n〜\n2023/02"
+              title="秋田くりひろげ株式会社 入社課題"
+              description="webアプリケーションのチーム開発課題。\nデザインとフロントエンドのコーディングを担当。\nデザインからコーディングに移る際に課題にぶつかった経験から、デザインエンジニアを目指すように。"
+            />
+            <TimelineItem
+              date="2023/04\n〜\n現在"
+              title="秋田くりひろげ株式会社 アルバイト"
+              description="フロントエンドエンジニアとしてアルバイト入社。\n主にNext.js/React/TypeScriptを使用し、OpenAPIを使ったSPAなどを開発。"
+            />
+            <TimelineItem
+              date="2024/03\n〜\n2024/06"
+              title="株式会社ゼロイチラボ  アルバイト"
+              description="webアプリケーションのチーム開発課題。\nデザインとフロントエAstro.jsで既にあるデザインをwebサイトコーディング。\nエンジニア視点から見たデザインと、デザイナー視点から見たデザインに大きな違いがあると感じ、デザイナーとエンジニア間で起きる齟齬をなくしたいと思うように。"
+            />
+            <TimelineItem
+              date="2024/07\n〜\n現在"
+              title="株式会社スプーキーズ アルバイト"
+              description="フロントエンドエンジニアとしてアルバイト入社。\nwebアプリケーションのVue.jsのコーディングから画面デザイン、デザインから見た設計の詰め、設計書の作成など幅広く携わっている。"
+            />
+          </table>
+        </div>
+        <!-- skillsection -->
+        <div class="skill">
+          <h3 class="skill-title">スキル</h3>
+          <div class="set">
+            <p class="title">スキルセット</p>
+            <p class="explanation">
+              スキルレベルについて 以下のスキルレベルは4段階で評価しています<br
+              />
+              ★☆☆☆: 入門レベル（基礎を理解)<br />
+              ★★☆☆:基本的なタスクを独立してこなせる。<br />
+              ★★★☆: 実務で使用経験あり。<br />
+              ★★★★: 実務経験豊富、複雑なタスクも対応可能。
+            </p>
+            <div class="skill-set-items">
+              <div class="skill-set-item">
+                <p class="title">デザイン関係</p>
+                <SkillSetItem name="Figma" rating={3} />
+                <SkillSetItem name="UI/UX開発" rating={3} />
+                <SkillSetItem name="Illustrator" rating={2} />
+                <SkillSetItem name="Photoshop" rating={2} />
+                <SkillSetItem name="Adobe XD" rating={2} />
+              </div>
+              <div class="skill-set-item">
+                <p class="title">コーディング関係</p>
+                <SkillSetItem name="HTML/CSS" rating={4} />
+                <SkillSetItem name="TailwindCSS" rating={3} />
+                <SkillSetItem name="TypeScript" rating={3} />
+                <SkillSetItem name="React" rating={4} />
+                <SkillSetItem name="Next.js" rating={3} />
+                <SkillSetItem name="Astro.js" rating={3} />
+              </div>
+            </div>
+          </div>
+          <div class="discription">
+            <p class="title">デザインについて</p>
+            <p>
+              FigmaやAdobe
+              XDを使ったワイヤーフレーム作成、モックアップ、プロトタイピングが可能です。個人開発やチーム開発で最大5ページ規模の画面設計やレスポンシブ対応デザインを経験しました。また、IllustratorやPhotoshopを用いたロゴ制作や画像加工も行っています。現在、UI/UXデザインの視点をさらに深めるため、アクセシビリティやユーザビリティの基準を学びつつ、UXリサーチやユーザビリティテストを個人開発に取り入れています。デザインの質を高め、ユーザーにとって直感的で心地よい体験を提供できるデザインを目指しています。
+            </p>
+          </div>
+          <div class="discription">
+            <p class="title">エンジニアリングについて</p>
+            <p>
+              ReactやTypeScriptを中心に、コンポーネント設計を意識したWebアプリケーション開発が可能です。Next.jsやAstro.jsを活用した動的サイトや静的サイトの構築も経験しています。また、HTML/CSSを用いたレスポンシブデザインやアクセシビリティを意識したコーディング、TailwindCSSによる効率的なスタイリングも得意です。
+              保守性やパフォーマンスを考慮し、再利用性の高いコードを書くことを心掛けています。さらに、技術の応用力を高めるために新しいツールやフレームワークにも積極的に挑戦しています。
+            </p>
+          </div>
+        </div>
+        <Button link="works">制作物をみる</Button>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    overflow: hidden;
+  }
+  .about-contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-content {
+    width: 50%;
+    max-width: 500px;
+    height: 700px;
+    position: fixed;
+    top: 180px;
+    left: 15%;
+    overflow-y: hidden;
+  }
+
+  .animation-wrapper {
+    position: relative;
+    width: 500px;
+    height: 1000px;
+    overflow: hidden;
+  }
+
+  .part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .part-1 {
+    z-index: 1;
+    animation: move-body 8s ease-in-out infinite;
+  }
+  .part-2 {
+    z-index: 4;
+    animation: move-monitor 6s ease-in-out infinite;
+  }
+  .part-3 {
+    z-index: 3;
+    animation: move-pc 7s ease-in-out infinite;
+  }
+  .part-4 {
+    z-index: 2;
+    animation: move-space 7.5s ease-in-out infinite;
+  }
+  .part-5 {
+    z-index: 5;
+    animation: move-stars 6.5s ease-in-out infinite;
+  }
+
+  @keyframes move-body {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-10px) translateY(10px);
+    }
+  }
+
+  @keyframes move-monitor {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes move-pc {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(7deg);
+    }
+  }
+
+  @keyframes move-stars {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(30px) translateY(-10px);
+    }
+  }
+
+  @keyframes move-space {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+
+  .right-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 580px;
+    gap: 3rem;
+    overflow-y: auto;
+    margin-left: 50%;
+  }
+  .right-content h3 {
+    margin-bottom: 2rem;
+  }
+  .right-content h2 span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  .right-content .career .timeline {
+    width: 100%;
+    border-collapse: collapse;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    background: url("/images/arrow.png") center no-repeat;
+    background-size: contain;
+    background-position: left 15% center;
+  }
+
+  .skill {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .slill .skill-title {
+    margin-bottom: 0;
+  }
+
+  .skill .set {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    background-color: aliceblue;
+    border-radius: 20px;
+  }
+  .skill .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .explanation {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  .skill-set-items {
+    display: inline-flex;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .skill-set-item .title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .skill .discription {
+    margin-bottom: 2rem;
+  }
+  .skill .discription .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  /* レスポンシブ */
+  @media screen and (max-width: 1024px) {
+    .about-contents {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .left-content {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .animation-wrapper {
+      width: 100%;
+      height: auto;
+    }
+
+    .right-content {
+      width: 100%;
+      margin-left: 0;
+      padding: 1rem 2rem;
+    }
+
+    .description,
+    .vision,
+    .career,
+    .skill {
+      text-align: center;
+    }
+
+    .skill .set {
+      padding: 1rem;
+    }
+
+    .skill-set-items {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .right-content .career .timeline {
+      width: 100%;
+      border-collapse: collapse;
+      display: inline-flex;
+      flex-direction: column;
+      position: relative;
+      background: url("/images/arrow.png") center no-repeat;
+      background-size: contain;
+      background-position: left center;
+    }
+
+    .left-content {
+      height: 420px;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+    .animation-wrapper {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+</style>

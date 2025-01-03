@@ -1,0 +1,161 @@
+---
+const { currentPage } = Astro.props;
+---
+
+<nav>
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+  <ul class="menu__box">
+    <li><a class="menu__item" href="/">Top</a></li>
+    <li>
+      <a
+        href="/about"
+        class="menu__item"
+        style={currentPage === "about" ? "display:none;" : ""}>About</a
+      >
+    </li>
+    <li>
+      <a
+        href="/works"
+        class="menu__item"
+        style={currentPage === "works" ? "display:none;" : ""}>Works</a
+      >
+    </li>
+    <li>
+      <a class="menu__item" href="https://github.com/VOWAC" target="_blank"
+        >Github</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    display: none;
+    align-items: center;
+  }
+
+  .logotype {
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .menu__box {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+
+  .menu__item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 0 1.9em;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .menu__btn {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      display: flex;
+    }
+    .menu__box {
+      flex-direction: column;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: fit-content;
+      margin: -600px 0 0 0;
+      padding: 0.6em 0;
+      text-align: center;
+      background-image: var(--background-image);
+      box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      transition-duration: 0.5s;
+    }
+
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      font-size: 18px;
+      transition-duration: 0.5s;
+    }
+
+    .menu__item:hover {
+      color: var(--color-secondary);
+    }
+
+    .menu__btn {
+      transition-duration: 0.25s;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .menu__btn span {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-text-primary);
+      transition-duration: 0.25s;
+    }
+    .menu__btn span::before,
+    .menu__btn span::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-text-primary);
+      transition-duration: 0.25s;
+    }
+
+    .menu__btn span::before {
+      top: -8px;
+    }
+
+    .menu__btn span::after {
+      top: 8px;
+    }
+    #menu__toggle {
+      opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+      background: var(--color-secondary);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+      background: var(--color-secondary);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+      visibility: visible;
+      left: 0;
+      margin: 0;
+    }
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+const { name, rating } = Astro.props;
+---
+
+<div class="skill-set-item">
+  <div class="rating">
+    {Array.from({ length: rating }, (_, i) => <span class="star">★</span>)}{
+      Array.from({ length: 4 - rating }, (_, i) => <span class="star">☆</span>)
+    }
+  </div>
+  <p>{name}</p>
+</div>
+
+<style>
+  .skill-set-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    font-size: 0.9px;
+  }
+  .rating {
+    display: inline-flex;
+  }
+  .star {
+    display: block;
+    height: 100%;
+    font-size: 1.1rem;
+    color: #ffd500;
+  }
+</style>

@@ -1,0 +1,148 @@
+<section id="top">
+  <h1>DONA's</h1>
+  <h2>Portfolio</h2>
+  <div class="description">
+    <p class="desc">技術とデザインの両視点から</p>
+    <p>価値あるものを形にしたい。</p>
+  </div>
+  <svg class="arrows">
+    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+    <path class="a2" d="M0 20 L30 52 L60 20"></path>
+    <path class="a3" d="M0 40 L30 72 L60 40"></path>
+  </svg>
+</section>
+
+<style>
+  #top {
+    z-index: 2;
+    height: 100vh;
+    color: white;
+    text-decoration: underline 1px white;
+    text-underline-offset: 0.5rem;
+    text-align: right;
+    padding-right: 3rem;
+  }
+
+  #top h1 {
+    font-size: 6rem;
+    letter-spacing: 0.4rem;
+    color: white;
+  }
+
+  #top h2 {
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    color: white;
+  }
+  #top p {
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    color: white;
+    white-space: nowrap;
+  }
+  .desc {
+    margin-right: 4rem;
+  }
+
+  .arrows {
+    width: 60px;
+    height: 72px;
+    position: relative;
+    right: 5%;
+    bottom: 5%;
+    margin: 0;
+    margin-top: 5rem;
+    z-index: 10;
+  }
+
+  .arrows path {
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+  }
+
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+  }
+
+  .arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+  }
+
+  .arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+  }
+
+  /* レスポンシブ */
+  @media (max-width: 1024px) {
+    #top {
+      text-align: center;
+      padding: 0;
+      /* margin-top: -20vh; */
+    }
+    #top h1 {
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+    }
+    #top h2 {
+      margin-top: -1.5rem;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      letter-spacing: 0.1rem;
+    }
+    .desc {
+      margin-right: 0;
+    }
+    #top p {
+      font-size: 1.2rem;
+      letter-spacing: 0rem;
+      color: white;
+    }
+    .description{
+      margin-top: 50vh;
+    }
+    .arrows {
+    right: 0;
+    bottom: 0;
+    margin-top: 5rem;
+    z-index: 10;
+  }
+  }
+</style>

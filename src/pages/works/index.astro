@@ -1,0 +1,51 @@
+---
+import Breadcrumb from "@components/Breadcrumb.astro";
+import Header from "@components/Header.astro";
+import WorkCard from "@components/works/WorkCard.astro";
+import Layout from "@layouts/Layout.astro";
+import works from "@data/works.json";
+
+type Work = {
+  name: string;
+  shortDescription: string;
+  tags: string[];
+  link: string;
+  thumbnail: string;
+};
+
+type Works = Work[];
+
+// データに型を適用
+const data: Works = works;
+---
+
+<Layout>
+  <Header currentPage="works" />
+  <div class="container">
+    <Breadcrumb currentCategory="works" currentPage="" />
+    <!-- WorksSection -->
+    <section id="works">
+      {
+        data.map((work) => (
+          <WorkCard
+            title={work.name}
+            shortDescription={work.shortDescription}
+            thumbnail={work.thumbnail}
+            tags={work.tags}
+            link={work.link}
+          />
+        ))
+      }
+    </section>
+  </div>
+</Layout>
+
+<style>
+  section#works {
+      max-width: 990px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+</style>

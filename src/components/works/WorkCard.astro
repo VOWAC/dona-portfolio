@@ -1,0 +1,92 @@
+---
+import Button from "@components/Button.astro";
+
+type WorksCardProps = {
+  title: string;
+  shortDescription: string;
+  thumbnail: string;
+  tags: string[];
+  link: string;
+};
+
+const { title, shortDescription, thumbnail, tags, link } =
+  Astro.props as WorksCardProps;
+---
+
+<div class="work">
+  <img src={thumbnail} alt="サムネイル" />
+  <div class="right-contents">
+    <h2>{title}</h2>
+    <div class="description">
+      <p>{shortDescription}</p>
+      <small>
+        {tags.map((tag) => <span>{tag}</span>)}
+      </small>
+    </div>
+    <Button link=`/works/${link}`>詳細を見る</Button>
+  </div>
+</div>
+
+<style>
+  .work {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 990px;
+  }
+
+  .work img {
+    width: 440px;
+    height: 278px;
+    object-fit: cover;
+  }
+
+  .work .right-contents {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 2rem;
+  }
+
+  .work .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .work .description small {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+
+  .work .description small span {
+    color: var(--font-color);
+  }
+
+  .work .description small span:not(:last-child)::after {
+    content: "/";
+    margin-left: 0.5rem;
+  }
+
+  /* レスポンシブ */
+  @media screen and (max-width: 768px) {
+    .work {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .work img {
+      width: 100%;
+      height: auto;
+    }
+
+    .work .right-contents {
+      width: 100%;
+    }
+  }
+</style>

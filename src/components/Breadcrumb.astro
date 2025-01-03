@@ -1,0 +1,56 @@
+---
+const { currentCategory = "Category", currentPage = "" } = Astro.props;
+
+const pages = [
+  { name: "Top", href: "/" },
+  { name: currentCategory, href: `/${currentCategory}` },
+];
+
+// currentPageが空でない場合にのみページを追加
+if (currentPage) {
+  pages.push({ name: currentPage, href: `/${currentCategory}/${currentPage}` });
+}
+---
+
+<nav>
+  <ol>
+    {pages.map((page, index) => (
+      <li>
+        {index === pages.length - 1 ? (
+          <span>{page.name}</span>
+        ) : (
+          <a href={page.href}>{page.name}</a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  nav ol {
+    margin: 2rem 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: var(--font-color);
+    opacity: 0.5;
+  }
+
+  nav li {
+    margin-right: 0.5rem;
+  }
+
+  nav li:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

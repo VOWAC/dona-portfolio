@@ -1,0 +1,108 @@
+---
+import Breadcrumb from "@components/Breadcrumb.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import works from "@data/works.json";
+
+const work = works.find((w) => w.link === "atori-e");
+
+if (!work) {
+  throw new Error("データが見つかりません");
+}
+---
+
+<Layout>
+  <Header currentPage="works" />
+  <div class="container">
+    <Breadcrumb currentCategory="works" currentPage={work.name} />
+    <div class="flex-wrapper">
+    <h1>{work.name}</h1>
+    <div>
+      <img src={work.thumbnail} alt="{work.name}" />
+      <div class="links">
+        <p>デモリンク:<a href={work.url} target="_blank">{work.url}</a></p>
+        <p>Github:<a href={work.github} target="_blank">{work.github}</a></p>
+      </div>
+    </div>
+
+    <section id="details">
+      <div class="details-flex">
+        {
+          work.details.map((detail) => (
+            <div class="detail-item">
+              <h3>{detail.title}：</h3>
+              <p>{detail.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+    <section id="design">
+      <h2>デザイン段階と実装にあたって変更した点</h2>
+      <img src={work.designScreenshots} alt="AtoriE_デザイン段階" />
+      <div class="details-flex">
+        {
+          work.designChanges?.map((designChange) => (
+            <div class="detail-item">
+              <h3>{designChange.change}：</h3>
+              <p>{designChange.implementationChanges}</p>
+              <p>{designChange.reason}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  section {
+    margin-top: 2rem;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-link);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  .links a {
+    margin: 1rem 0;
+  }
+
+  .details-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .detail-item {
+    flex: 1 1 calc(50% - 1rem);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ebedf3;
+  }
+
+  @media (max-width: 768px) {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .details-flex .detail-item {
+      flex: 1 1 100%;
+    }
+  }
+</style>
