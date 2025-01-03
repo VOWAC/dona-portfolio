@@ -102,35 +102,6 @@
       }
     ]
   },
- {
-      "id": 3,
-      "name": "案内サイト",
-      "shortDescription": "TCA東京ECO動物海洋専門学校文化祭のフロアの案内サイト",
-      "tags": ["チーム開発", "デザイン"],
-      "link": "tca-eco-school-festival",
-      "url": "https://tca-eco-school-festival.vercel.app/?v=1",
-      "thumbnail": "/images/works/tca-eco-school-festival.png",
-      "details": [
-        {
-          "title": "プロジェクト概要",
-          "description": "TCA東京ECO動物海洋専門学校文化祭のフロア案内サイトを制作しました。来場者が学校内の各展示フロアをスムーズに把握できることを目的としています。"
-        },
-        {
-          "title": "制作の背景と目的",
-          "description": "文化祭を訪れる来場者が効率よくフロアを巡るため、デザインと利便性に配慮した案内サイトを提案・制作しました。"
-        },
-        {
-          "title": "担当した部分の技術スタック",
-          "description": "デザイン: Figma"
-        },
-        {
-          "title": "成長と学び",
-          "description": "文化祭の案内サイトでは、依頼者とのやり取りを重ねて具体的なフィードバックを受ける経験を初めてしました。要望を形にし、柔軟に対応する力が求められたことで、クライアントとの連携の重要性を学びました。"
-        }
-      ],
-      "designScreenshots": "/images/works/tca-eco-school-festival-design.png",
-      "designChanges": []
-    },
     {
       "id": 3,
       "name": "案内サイト",
