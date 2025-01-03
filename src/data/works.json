@@ -137,8 +137,8 @@
       "shortDescription": "DONAのポートフォリオサイト",
       "tags": ["個人開発", "デザイン", "コーディング"],
       "link": "portfolio",
-      "url": "",
-      "github": "",
+      "url": "https://dona-omega.vercel.app/",
+      "github": "https://github.com/VOWAC/dona-portfolio",
       "thumbnail": "/images/works/portfolio.png",
       "details": [
         {
@@ -151,7 +151,7 @@
         },
         {
           "title": "技術スタック",
-          "description": "デザイン: Figma、コーディング: TypeScript, Astro.js、デプロイ: Netlify"
+          "description": "デザイン: Figma、コーディング: TypeScript, Astro.js、デプロイ: Vercel"
         },
         {
           "title": "ポートフォリオのテーマ",
