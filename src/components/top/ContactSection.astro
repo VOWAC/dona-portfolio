@@ -1,47 +1,66 @@
 <section id="contact">
   <h2>Contact</h2>
-  <h3>金井雪華</h3>
+  <h3>DONA (金井雪華)</h3>
   <p>
-    ご興味をお持ちいただけましたら、ぜひご連絡ください。<br
-    />お待ちしております。
+    ご興味をお持ちいただけましたら、ぜひご連絡ください。<br />
+    お待ちしております。
   </p>
-  <p>Email:<span>yukihakanai.2@gmail.com</span></p>
-  <p>Email(sub):<span>dona.vowac@gmail.com</span></p>
-  <p>
-    GitHab:<span
-      ><a href="https://github.com/VOWAC" target="_blank"
-        >https://github.com/VOWAC</a
-      ></span>
-  </p>
-  <p>
-    X:<span
-      ><a href="https://x.com/___VOWAC" target="_blank"
-        >https://x.com/___VOWAC</a
-      ></span>
-  </p>
+  <div class="links">
+    <p>Email: <span>yukihakanai.2@gmail.com</span></p>
+    <p>Email (sub): <span>dona.vowac@gmail.com</span></p>
+    <p>
+      GitHub:
+      <span
+        ><a href="https://github.com/VOWAC" target="_blank"
+          >https://github.com/VOWAC</a
+        ></span
+      >
+    </p>
+    <p>
+      X:
+      <span
+        ><a href="https://x.com/___VOWAC" target="_blank"
+          >https://x.com/___VOWAC</a
+        ></span
+      >
+    </p>
+  </div>
 </section>
 
 <style>
-  section#contact {
+  #contact {
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 50vh;
+    color: var(--font-color);
+    border-radius: 20px;
+  }
+
+  #contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  #contact h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  #contact p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+  }
+
+  .links {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 70vh;
-  }
-  h2 {
-    margin-bottom: 1rem;
-  }
-  h3 {
-    margin-bottom: 0.8rem;
-  }
-  p {
-    letter-spacing: 0.1rem;
-    margin-bottom: 4rem;
-  }
-  span {
-    font-weight: bold;
-    letter-spacing: 0.1rem;
+    gap: 0.2rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
   }
 </style>
