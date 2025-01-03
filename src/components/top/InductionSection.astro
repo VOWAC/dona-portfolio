@@ -26,4 +26,12 @@ const { id, title, desc, buttonText, link } = Astro.props;
     letter-spacing: 0.1rem;
     margin-bottom: 4rem;
   }
+  /* レスポンシブ */
+  @media (max-width: 1024px) {
+    section {
+      padding-right: 0;
+      text-align: center;
+      height: fit-content;
+    }
+  }
 </style>

@@ -5,37 +5,35 @@ import TopLayout from "@layouts/TopLayout.astro";
 import InductionSection from "@components/top/InductionSection.astro";
 ---
 
-<TopLayout bodyClass="top">
+<TopLayout>
   <div class="wrapper">
     <div class="main">
       <img src="/images/dona_no_background.png" alt="main" />
     </div>
     <div class="scroll-content">
       <TopSection />
-      <InductionSection
-        id="about"
-        title="DONA（金井雪華）と、申します。"
-        desc="デザインとエンジニアリングを学んでいる専門学生です。\nデザインと技術の力を組み合わせ、課題解決に貢献できるエンジニアを目指しています。\nこれまでの学びの中で感じたこと、これからの挑戦への思いをプロフィールにまとめています。\nぜひご覧ください。"
-        buttonText="プロフィールをみる"
-        link="/about"
-      />
-      <InductionSection
-        id="works"
-        title="作り上げたものたち"
-        desc="これまで学び、挑戦してきた成果の一部です。\n未熟な点もありますが、一つ一つ丁寧に取り組んできました。\nぜひご覧ください。"
-        buttonText="制作物をみる"
-        link="/works"
-      />
-      <ContactSection />
+      <div class="background">
+        <InductionSection
+          id="about"
+          title="DONA（金井雪華）と、申します。"
+          desc="デザインとエンジニアリングを学んでいる専門学生です。\nデザインと技術の力を組み合わせ、課題解決に貢献できるエンジニアを目指しています。\nこれまでの学びの中で感じたこと、これからの挑戦への思いをプロフィールにまとめています。\nぜひご覧ください。"
+          buttonText="プロフィールをみる"
+          link="/about"
+        />
+        <InductionSection
+          id="works"
+          title="作り上げたものたち"
+          desc="これまで学び、挑戦してきた成果の一部です。\n未熟な点もありますが、一つ一つ丁寧に取り組んできました。\nぜひご覧ください。"
+          buttonText="制作物をみる"
+          link="/works"
+        />
+        <ContactSection />
+      </div>
     </div>
   </div>
 </TopLayout>
 
 <style>
-  .wrapper{
-   
-    height: fit-content;
-  }
   section {
     height: 100vh;
   }
@@ -53,8 +51,7 @@ import InductionSection from "@components/top/InductionSection.astro";
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 15% center;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    object-position: 17% 0;
   }
 
   .main::after {
@@ -65,7 +62,6 @@ import InductionSection from "@components/top/InductionSection.astro";
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
     z-index: 1;
     pointer-events: none;
   }
@@ -77,6 +73,24 @@ import InductionSection from "@components/top/InductionSection.astro";
     padding: 3rem;
     position: relative;
     display: block;
-    padding-bottom:0;
+    padding-bottom: 0;
+  }
+  /* レスポンシブ */
+  @media screen and (max-width: 1024px) {
+    .scroll-content {
+      width: 100%;
+      padding: 0;
+      top: 5vh;
+      
+    }
+    .background {
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding: 0;
+      padding-bottom: 5rem;
+    }
   }
 </style>
