@@ -72,4 +72,21 @@ const { title, shortDescription, thumbnail, tags, link } =
     content: "/";
     margin-left: 0.5rem;
   }
+
+  /* レスポンシブ */
+  @media screen and (max-width: 768px) {
+    .work {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .work img {
+      width: 100%;
+      height: auto;
+    }
+
+    .work .right-contents {
+      width: 100%;
+    }
+  }
 </style>

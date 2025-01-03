@@ -320,4 +320,73 @@ import Layout from "@layouts/Layout.astro";
     font-weight: bold;
     margin-bottom: 1rem;
   }
+
+  /* レスポンシブ */
+  @media screen and (max-width: 1024px) {
+    .about-contents {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .left-content {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .animation-wrapper {
+      width: 100%;
+      height: auto;
+    }
+
+    .right-content {
+      width: 100%;
+      margin-left: 0;
+      padding: 1rem 2rem;
+    }
+
+    .description,
+    .vision,
+    .career,
+    .skill {
+      text-align: center;
+    }
+
+    .skill .set {
+      padding: 1rem;
+    }
+
+    .skill-set-items {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .right-content .career .timeline {
+      width: 100%;
+      border-collapse: collapse;
+      display: inline-flex;
+      flex-direction: column;
+      position: relative;
+      background: url("/images/arrow.png") center no-repeat;
+      background-size: contain;
+      background-position: left center;
+    }
+
+    .left-content {
+      height: 420px;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+    .animation-wrapper {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
 </style>
