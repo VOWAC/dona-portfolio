@@ -3,6 +3,7 @@ import Breadcrumb from "@components/Breadcrumb.astro";
 import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
 import works from "@data/works.json";
+import Button from "@components/Button.astro";
 
 const work = works.find((w) => w.link === "portfolio");
 
@@ -36,6 +37,9 @@ if (!work) {
           }
         </div>
       </section>
+      <div style="margin:0 auto;margin-top: 4rem;">
+        <Button link="/works">他の制作物をみる</Button>
+      </div>
     </div>
   </div>
 </Layout>
