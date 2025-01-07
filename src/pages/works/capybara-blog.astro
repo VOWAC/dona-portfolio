@@ -26,18 +26,72 @@ if (!work) {
         </div>
       </div>
 
-      <section id="details">
-        <div class="details-flex">
-          {
-            work.details.map((detail) => (
-              <div class="detail-item">
-                <h3>{detail.title}：</h3>
-                <p>{detail.description}</p>
-              </div>
-            ))
-          }
-        </div>
-      </section>
+      {
+        work.sections?.map((section) => (
+          <section id={section.title}>
+            <h2>{section.title}</h2>
+            <div>
+              {section.content.map((detail, index) => (
+                <div class="detail-item">
+                  <h3>
+                    {"項目" in detail
+                      ? detail.項目
+                      : "ステップ" in detail
+                        ? detail.ステップ
+                        : "機能" in detail
+                          ? detail.機能
+                          : "Unknown"}
+                    ：
+                  </h3>
+                  {"内容" in detail && detail.内容 ? (
+                    Array.isArray(detail.内容) ? (
+                      <ul>
+                        {detail.内容.map((content, subIndex) => (
+                          <li>
+                            {typeof content === "string" ? (
+                              content
+                            ) : "ページ" in content && "url" in content ? (
+                              <>
+                                <strong>{content.ページ}:</strong>
+                                <img
+                                  src={content.url}
+                                  alt={content.ページ}
+                                  style={{ maxWidth: "100%" }}
+                                />
+                              </>
+                            ) : (
+                              <span>{JSON.stringify(content)}</span>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{detail.内容}</p>
+                    )
+                  ) : "説明" in detail && detail.説明 ? (
+                    Array.isArray(detail.説明) ? (
+                      <ul>
+                        {detail.説明.map((desc, subIndex) => (
+                          <li>{desc}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{detail.説明}</p>
+                    )
+                  ) : "機能" in detail && detail.説明 ? (
+                    <p>
+                      <strong>{detail.機能}:</strong> {detail.説明}
+                    </p>
+                  ) : (
+                    <p>表示する内容が見つかりません</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+
       <div style="margin:0 auto;margin-top: 4rem;">
         <Button link="/works">他の制作物をみる</Button>
       </div>
