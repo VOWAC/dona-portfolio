@@ -51,10 +51,10 @@ import Layout from "@layouts/Layout.astro";
           <p>
             私が目指すのは、デザインと技術の両視点から価値あるものを形にできるデザインエンジニアです。<br
             />
-            デザイナーとエンジニアの間にある齟齬を解消し、意図を正確に形にするだけでなく、スピーディーで高精度なプロトタイピングを通じて、チーム全体の価値を向上させていきたいと考えています。<br
+            デザイナーとエンジニアの間にある齟齬を解消し、意図を正しく形にするだけでなく、スピーディーで高精度なプロトタイピングを通じて、チーム全体の価値を向上させていきたいと考えています。<br
             />
             <br />
-            また、私にとってデザインは、色や形、動きでユーザーと会話するコミュニケーションの手段であり、技術はそれを形にする表現力です。両者を融合させることで、心に響く体験を生み出していきたいと考えています。
+            また、私にとってデザインは、色や形、動きでユーザーと会話するコミュニケーションの手段であり、技術はそれを形にする表現力です。両者を融合させることで、より「伝わる」デザインを生み出していきたいと考えています。
           </p>
         </div>
         <!-- careersection -->
@@ -80,12 +80,12 @@ import Layout from "@layouts/Layout.astro";
             <TimelineItem
               date="2024/03\n〜\n2024/06"
               title="Web制作サポート（アルバイト）"
-              description="デザインとフロントエAstro.jsで既にあるデザインをwebサイトコーディング。\nエンジニア視点から見たデザインと、デザイナー視点から見たデザインに大きな違いがあると感じ、デザイナーとエンジニア間で起きる齟齬をなくしたいと思うように。"
+              description="Astro.jsで既にあるデザインをwebサイトコーディング。\nエンジニア視点から見たデザインと、デザイナー視点から見たデザインに大きな違いがあると感じ、デザイナーとエンジニア間で起きる齟齬をなくしたいと思うように。"
             />
             <TimelineItem
               date="2024/07\n〜\n現在"
               title="株式会社スプーキーズ アルバイト"
-              description="フロントエンドエンジニアとしてアルバイト入社。\nwebアプリケーションのVue.jsのコーディングから画面デザイン、デザインから見た設計の詰め、設計書の作成など幅広く携わっている。"
+              description="フロントエンドエンジニアとしてアルバイト入社。\nwebアプリケーションのVue.jsのコーディングからデザインから見た設計の詰め、画面デザイン、設計書の作成など幅広く携わっている。"
             />
           </table>
         </div>
@@ -95,30 +95,31 @@ import Layout from "@layouts/Layout.astro";
           <div class="set">
             <p class="title">スキルセット</p>
             <p class="explanation">
-              スキルレベルについて 以下のスキルレベルは4段階で評価しています<br
-              />
-              ★☆☆☆: 入門レベル（基礎を理解)<br />
-              ★★☆☆:基本的なタスクを独立してこなせる。<br />
-              ★★★☆: 実務で使用経験あり。<br />
-              ★★★★: 実務経験豊富、複雑なタスクも対応可能。
+                スキルレベルについて<br
+                />以下のスキルレベルは3段階で評価しています
+              <br />
+              ★☆☆:基本的なタスクを独立してこなせる。<br />
+              ★★☆: 実務で使用経験あり。<br />
+              ★★★: 実務経験豊富、複雑なタスクも対応可能。
             </p>
             <div class="skill-set-items">
               <div class="skill-set-item">
                 <p class="title">デザイン関係</p>
-                <SkillSetItem name="Figma" rating={3} />
-                <SkillSetItem name="UI/UX開発" rating={3} />
-                <SkillSetItem name="Illustrator" rating={2} />
-                <SkillSetItem name="Photoshop" rating={2} />
-                <SkillSetItem name="Adobe XD" rating={2} />
+                <SkillSetItem name="Figma" rating={2} />
+                <SkillSetItem name="UI/UX開発" rating={2} />
+                <SkillSetItem name="Illustrator" rating={1} />
+                <SkillSetItem name="Photoshop" rating={1} />
+                <SkillSetItem name="Adobe XD" rating={1} />
               </div>
               <div class="skill-set-item">
                 <p class="title">コーディング関係</p>
-                <SkillSetItem name="HTML/CSS" rating={4} />
-                <SkillSetItem name="TailwindCSS" rating={3} />
-                <SkillSetItem name="TypeScript" rating={3} />
-                <SkillSetItem name="React" rating={4} />
-                <SkillSetItem name="Next.js" rating={3} />
-                <SkillSetItem name="Astro.js" rating={3} />
+                <SkillSetItem name="HTML/CSS" rating={3} />
+                <SkillSetItem name="TailwindCSS" rating={2} />
+                <SkillSetItem name="TypeScript" rating={2} />
+                <SkillSetItem name="React" rating={3} />
+                <SkillSetItem name="Next.js" rating={2} />
+                <SkillSetItem name="Astro.js" rating={2} />
+                <SkillSetItem name="Vue.js" rating={1} />
               </div>
             </div>
           </div>
@@ -370,9 +371,7 @@ import Layout from "@layouts/Layout.astro";
       display: inline-flex;
       flex-direction: column;
       position: relative;
-      background: url("/images/arrow.png") center no-repeat;
-      background-size: contain;
-      background-position: left center;
+      background: none;
     }
 
     .left-content {
