@@ -5,7 +5,7 @@ const { name, rating } = Astro.props;
 <div class="skill-set-item">
   <div class="rating">
     {Array.from({ length: rating }, (_, i) => <span class="star">★</span>)}{
-      Array.from({ length: 4 - rating }, (_, i) => <span class="star">☆</span>)
+      Array.from({ length: 3 - rating }, (_, i) => <span class="star">☆</span>)
     }
   </div>
   <p>{name}</p>
