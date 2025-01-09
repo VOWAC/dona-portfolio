@@ -26,25 +26,16 @@ const data: Works = works;
     <!-- WorksSection -->
     <section id="works">
       {
-        data
-          .filter((work) => work.name !== "カピバラブログ")
-          .map((work) => (
-            <WorkCard
-              title={work.name}
-              shortDescription={work.shortDescription}
-              thumbnail={work.thumbnail}
-              tags={work.tags}
-              link={work.link}
-            />
-          ))
+        data.map((work) => (
+          <WorkCard
+            title={work.name}
+            shortDescription={work.shortDescription}
+            thumbnail={work.thumbnail}
+            tags={work.tags}
+            link={work.link}
+          />
+        ))
       }
-      <!-- <WorkCard
-        title={work.name}
-        shortDescription={work.shortDescription}
-        thumbnail={work.thumbnail}
-        tags={work.tags}
-        link={work.link}
-      /> -->
     </section>
   </div>
 </Layout>
