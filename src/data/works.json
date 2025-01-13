@@ -1,48 +1,97 @@
-[
-  {
-    "id": 1,
-    "name": "カピバラブログ",
-    "shortDescription": "友人の個人ブログサイト",
-    "tags": ["個人開発", "デザイン", "コーディング"],
-    "link": "capybara-blog",
-    "url": "https://capybara-blog-flame.vercel.app/",
-    "github": "https://github.com/VOWAC/capybara-blog-app",
-    "thumbnail": "/images/works/capybara-blog.png",
-    "details": [
-      {
+[{
+  "id": 1,
+  "name": "カピバラブログ",
+  "shortDescription": "友人の個人ブログサイト",
+  "tags": ["個人開発", "デザイン", "コーディング"],
+  "link": "capybara-blog",
+  "url": "https://capybara-blog-flame.vercel.app/",
+  "github": "https://github.com/VOWAC/capybara-blog-app",
+  "thumbnail": "/images/works/capybara-blog.png",
+  "sections": [
+     {
         "title": "プロジェクト概要",
-        "description": "友人のために制作した個人ブログサイトです。"
-      },
-      {
-        "title": "制作の背景と目的",
-        "description": "友人から「個人ブログを作成したい」と依頼を受けたことがきっかけです。最低限の要件として、「自分が書き込めること」と「新着順に並べられること」「カピバラブログという名前だが、アルパカっぽくして欲しいこと」を満たしています。"
-      },
-      {
-        "title": "技術スタック",
-        "description": "デザイン: Figma、コーディング: TypeScript, Next.js、データベース、認証: Supabase、デプロイ: Vercel。Astro.jsも検討しましたが、ユーザーが頻繁に操作することを考慮し、Next.jsを採用しました。"
-      },
-      {
-        "title": "成功したポイント",
-        "description": "記事の新着順表示や記事の投稿や編集、削除が容易に行えるようにしました。また、管理者とユーザーでのUIの切り替えの実装をすることができました。"
-      },
-      {
-        "title": "成長と学び",
-        "description": "動的ルーティングの仕組みを習得し、今後のプロジェクトで活用できるようになりました。また、シンプルで柔らかい雰囲気を持つデザインのコツを掴むことができました。"
-      },
-      {
-        "title": "課題とこれから",
-        "description": "サイト全体が重くなりがちなため、さらなるパフォーマンスの改善が必要です。また、ファビコンやローディング画面、404画面の作成と、記事をファイル分けする機能の実装も課題としています。"
-      },
-      {
-        "title": "制作期間",
-        "description": "約3週間です。"
-      },
-      {
-        "title": "作品に対して",
-        "description": "友人が実際にこのブログを利用している姿を見て、とても嬉しく感じました。"
-      }
-    ]
-  },
+        "contents": [
+           {"name": "プロジェクト名", "description": "カピバラブログ"},
+           {"name": "目的", "description": "友人の活動記録用ブログサイトをデザインから開発、デプロイまで一貫して制作。"},
+           {"name": "制作期間", "description": "3週間"},
+           {"name": "技術スタック", "description": "React / Next.js /  TypeScript / Supabase / Vercel"},
+           {"name": "要件", "description": 
+              "自分のみが記事を投稿できる（認証機能）/ 記事一覧ページ（新着順表示、タイトルのみ表示）/ 記事詳細ページ（タイトル・本文・日時）/ プロフィールページ（アイコンと紹介文付き）/ 記事作成・編集・削除機能"
+           }
+        ]
+     },
+     {
+        "title": "調査・要望分析",
+        "contents": [
+           {"name": "リサーチ対象", "items": ["Qiita", "Zenn", "しずかなインターネット", "note"]},
+           {"name": "ポイント", "items": [
+              "カード型UIを採用し、情報を整理してクリックしやすいレイアウトを採用。",
+              "クリックできる箇所を丸みを帯びたデザインに統一。",
+              "記事作成画面はZennを参考にし、シンプルな文字入力形式でスピード重視の設計。"
+           ]},
+           {"name": "友人の要望", "items": [
+              "柔らかい雰囲気を重視してほしい",
+              "カピバラブログという名前だが、アルパカモチーフのロゴが欲しい"
+           ]}
+        ]
+     },
+     {
+        "title": "デザインプロセス",
+        "contents": [
+           {"name": "各ページデザイン(スクリーンショット)", "pages": [
+              {"page": "記事一覧ページ", "url": "/images/works/capybara-blog/posts.png"},
+              {"page": "記事一覧ページ_管理者", "url": "/images/works/capybara-blog/posts-admin.png"},
+              {"page": "アバウトページ", "url": "/images/works/capybara-blog/about.png"},
+              {"page": "アバウトページ_管理者", "url": "/images/works/capybara-blog/about-admin.png"},
+              {"page": "記事詳細ページ", "url": "/images/works/capybara-blog/post.png"},
+              {"page": "記事詳細ページ_管理者", "url": "/images/works/capybara-blog/post-admin.png"},
+              {"page": "記事作成・編集ページ", "url": "/images/works/capybara-blog/create.png"},
+              {"page": "アバウト編集ページ", "url": "/images/works/capybara-blog/about-edit.png"},
+              {"page": "ログインページ", "url":"/images/works/capybara-blog/login.png"},
+              {"page": "記事一覧ページ_レスポンシブ", "url": "/images/works/capybara-blog/posts-responsive.png"},
+              {"page": "アバウトページ_レスポンシブ", "url": "/images/works/capybara-blog/about-responsive.png"},
+              {"page": "記事詳細ページ_レスポンシブ", "url": "/images/works/capybara-blog/post-responsive.png"},
+              {"page": "記事作成・編集ページ_レスポンシブ", "url": "/images/works/capybara-blog/create-responsive.png"},
+              {"page": "ログインページ_レスポンシブ", "url":"/images/works/capybara-blog/login-responsive.png"}
+              ]},
+           {"name":"プロセス" ,"steps":[
+            {"step": "ワイヤーフレーム作成", "desc": "ページ構成と情報設計をシンプルかつ柔らかな雰囲気に設計。"},
+            {"step": "ロゴデザイン", "desc": "アルパカをモチーフに、温かみのある丸みを帯びたフォルムを採用し、手描き風の曲線を取り入れ、親しみやすさを表現。"},
+            {"step": "フォント選定", "desc": "まめロンフォントを使用し、優しい印象を演出。"},
+            {"step": "UI要素デザイン", "desc": [
+               "記事カードUI：日付とタイトルを配置し、柔らかいシャドウ効果を加えた。",
+               "公開/非公開のチェックボックスをアクティブにすると、確定ボタンの文言が変わり、挙動が変わることをわかりやすく伝えるようなデザインに。"
+            ]},
+            {"step": "フィードバック", "desc": "画面デザインが完成し、友人にデザインを確認してもらった。「配色を変えたい」とのフィードバックを受けた。"},
+            {"step": "配色選定", "desc": "「言の葉配色辞典」を使用し、柔らかく落ち着いた色を提案。"}
+           ]}
+           
+        ]
+     },
+     {
+        "title": "実装機能のポイント",
+        "content": [
+           {"機能": "認証機能", "説明": "Supabase Authを使用し、管理者専用ページを保護。"},
+           {"機能": "CRUD機能", "説明": "Supabaseのデータベースを活用し、記事の作成、編集、削除を実装。"},
+           {"機能": "公開・非公開切り替え", "説明": "チェックボックスで記事の公開状態を制御。"},
+           {"機能": "エラーハンドリング", "説明": "データ保存時のエラー発生時にユーザーへエラーメッセージを表示。"}
+        ]
+     },
+     {
+        "title": "振り返りと成果",
+        "content": [
+           {"得た学び": [
+              "柔らかさを表現するUIデザインの手法を体系的に学べた。"
+           ]},
+           {"今後の課題": [
+              "記事のファイル機能の追加。",
+              "ローディング画面のアニメーション作成や404画面の作成",
+              "ホバーアニメーションの追加"
+           ]}
+        ]
+     }
+  ]
+}, 
   {
     "id": 2,
     "name": "AtoriE",
@@ -91,7 +140,7 @@
       {
         "change": "ハンバーガーメニューの削除",
         "designConcept": "他のギャラリーページへのアクセスを容易にするため、ハンバーガーメニューを用意していました。",
-        "implementationChanges": "ギャラリーごとの内容に集中してほしいという意図から、ハンバーガーメニューを削除し、下部に他のページへのリンクを設置しました。",
+        "implementationChanges": "ギャラリーごとのdescriptionに集中してほしいという意図から、ハンバーガーメニューを削除し、下部に他のページへのリンクを設置しました。",
         "reason": "各ギャラリーを深く楽しんでもらうための配慮です。"
       },
       {
