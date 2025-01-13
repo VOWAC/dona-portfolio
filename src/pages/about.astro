@@ -262,6 +262,7 @@ import Layout from "@layouts/Layout.astro";
     gap: 3rem;
     overflow-y: auto;
     margin-left: 50%;
+    background-color: #fff;
   }
   .right-content h3 {
     margin-bottom: 2rem;
@@ -329,6 +330,11 @@ import Layout from "@layouts/Layout.astro";
   }
 
   /* レスポンシブ */
+  @media screen and (max-width: 1400px) {
+    .left-content {
+      left: 5%;
+    }
+  }
   @media screen and (max-width: 1024px) {
     .about-contents {
       flex-direction: column;
