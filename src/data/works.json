@@ -95,7 +95,7 @@
   {
     "id": 2,
     "name": "AtoriE",
-    "shortDescription": "「冬隣あとり」のイラスト作品展",
+    "shortDescription": "自分のイラストサイト",
     "tags": ["個人開発", "デザイン", "コーディング"],
     "link": "atori-e",
     "url": "https://atorie.netlify.app/",
@@ -153,8 +153,8 @@
   },
     {
       "id": 3,
-      "name": "案内サイト",
-      "shortDescription": "TCA東京ECO動物海洋専門学校文化祭のフロアの案内サイト",
+      "name": "学校文化祭のフロア案内サイト",
+      "shortDescription": "TCA東京ECO動物海洋専門学校文化祭",
       "tags": ["チーム開発", "デザイン"],
       "link": "tca-eco-school-festival",
       "url": "https://tca-eco-school-festival.vercel.app/?v=1",
