@@ -1,9 +1,14 @@
 ---
 const { currentCategory = "Category", currentPage = "" } = Astro.props;
 
+const categoryMap: { [key: string]: string } = {
+  about: "About",
+  works: "Works",
+};
+
 const pages = [
   { name: "Top", href: "/" },
-  { name: currentCategory, href: `/${currentCategory}` },
+  { name: categoryMap[currentCategory], href: `/${currentCategory}` },
 ];
 
 // currentPageが空でない場合にのみページを追加
