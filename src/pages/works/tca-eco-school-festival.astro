@@ -5,11 +5,46 @@ import Layout from "@layouts/Layout.astro";
 import works from "@data/works.json";
 import Button from "@components/Button.astro";
 
-const work = works.find((w) => w.link === "tca-eco-school-festival");
+const work: Work = works.find(
+  (w) => w.link === "tca-eco-school-festival"
+) as Work;
 
 if (!work) {
   throw new Error("データが見つかりません");
 }
+
+type Work = {
+  id: number;
+  name: string;
+  shortDescription: string;
+  tags: string[];
+  link: string;
+  url: string;
+  github: string;
+  thumbnail: string;
+  sections: Section[];
+};
+
+type Section = {
+  title: string;
+  contents?: BaseContent[];
+  content?: BaseContent[];
+};
+
+type BaseContent = {
+  name?: string;
+  description?: string | string[];
+  items?: string[];
+  pages?: { page: string; url: string }[];
+  steps?: { step: string; desc: string | string[] }[];
+  機能?: string;
+  説明?: string;
+  テスト方法?: string;
+  ポジティブな評価?: string[];
+  改善要望?: string[];
+  得た学び?: string[];
+  今後の課題?: string[];
+};
 ---
 
 <Layout>
@@ -24,19 +59,174 @@ if (!work) {
           <p>リンク:<a href={work.url} target="_blank">{work.url}</a></p>
         </div>
       </div>
-
-      <section id="details">
-        <div class="details-flex">
-          {
-            work.details.map((detail) => (
-              <div class="detail-item">
-                <h3>{detail.title}：</h3>
-                <p>{detail.description}</p>
-              </div>
-            ))
+      {
+        work.sections?.map((section) => {
+          if (section.title === "プロジェクト概要") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  {section.contents?.map((content) => (
+                    <div class="detail-item">
+                      <h3>{content.name}：</h3>
+                      <p>{content.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
           }
-        </div>
-      </section>
+          if (section.title === "調査・要望分析") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  {section.contents?.map((content) => (
+                    <div class="detail-item">
+                      <h3>{content.name}：</h3>
+                      {content.items?.map((item) => (
+                        <p>{item}</p>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          }
+          if (section.title === "デザインプロセス") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  {section.contents?.map((content) => (
+                    <div class="detail-item">
+                      <h3>{content.name}：</h3>
+                      {content.pages && (
+                        <div class="pages">
+                          {content.pages.map((page) => (
+                            <div class="page">
+                              <p>{page.page}</p>
+                              <img src={page.url} alt={page.page} />
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {content.steps && (
+                        <div>
+                          {content.steps.map((step) => (
+                            <div class="step-item">
+                              <p class="step">{step.step}：</p>
+                              {Array.isArray(step.desc) ? (
+                                <ul>
+                                  {step.desc.map((descItem) => (
+                                    <li>{descItem}</li>
+                                  ))}
+                                </ul>
+                              ) : (
+                                <p>{step.desc}</p>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          }
+
+          if (section.title === "実装機能のポイント") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  {section.content?.map((content) => (
+                    <div class="detail-item">
+                      <h3>{content.機能}：</h3>
+                      <p>{content.説明}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          }
+
+          if (section.title === "ユーザーテスト・フィードバック") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  {section.content?.map((content, idx) => (
+                    <div class="detail-item">
+                      <h3>{content.テスト方法 || "フィードバック"}：</h3>
+                      {content["ポジティブな評価"] ? (
+                        <ul>
+                          {content["ポジティブな評価"].map((feedback) => (
+                            <li>{feedback}</li>
+                          ))}
+                        </ul>
+                      ) : content["改善要望"] ? (
+                        <ul>
+                          {content["改善要望"].map((improvement) => (
+                            <li>{improvement}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>情報がありません</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          }
+
+          if (section.title === "振り返りと成果") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  {section.content?.map((content) => (
+                    <div class="detail-item">
+                      <h3>{Object.keys(content)[0]}：</h3>
+                      {(() => {
+                        const contentValue = Object.values(content)[0];
+
+                        if (Array.isArray(contentValue)) {
+                          return (
+                            <ul>
+                              {contentValue.map((value) => (
+                                <li>
+                                  {typeof value === "string"
+                                    ? value
+                                    : JSON.stringify(value)}
+                                </li>
+                              ))}
+                            </ul>
+                          );
+                        }
+
+                        return (
+                          <p>
+                            {typeof contentValue === "string"
+                              ? contentValue
+                              : JSON.stringify(contentValue)}
+                          </p>
+                        );
+                      })()}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          }
+
+          return null;
+        })
+      }
+
       <div style="margin:0 auto;margin-top: 4rem;">
         <Button link="/works">他の制作物をみる</Button>
       </div>
@@ -74,7 +264,7 @@ if (!work) {
   .details-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .detail-item {
@@ -83,6 +273,32 @@ if (!work) {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #ebedf3;
+    margin-top: 1rem;
+  }
+
+  .pages {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .page {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+
+  .page img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 8px;
+  }
+
+  .step {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
   }
 
   @media (max-width: 768px) {
