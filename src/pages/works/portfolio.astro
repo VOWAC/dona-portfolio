@@ -42,6 +42,8 @@ type BaseContent = {
   改善要望?: string[];
   得た学び?: string[];
   今後の課題?: string[];
+  illust?: string;
+  url?: string;
 };
 ---
 
@@ -196,6 +198,31 @@ type BaseContent = {
             );
           }
 
+          if (section.title === "キャラクターデザインとイラスト") {
+            return (
+              <section id={section.title}>
+                <h2>{section.title}</h2>
+                <div>
+                  <div class="detail-item">
+                    <div class="flex-wrapper_illust">
+                      {section.content?.map((content) => (
+                        <div class="illust-item">
+                          <h3>{content.illust}：</h3>
+                          <img
+                            src={content.url}
+                            alt={content.illust}
+                            class="illust-image"
+                          />
+                          <p class="illust-text">{content.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+            );
+          }
+
           if (section.title === "振り返りと成果") {
             return (
               <section id={section.title}>
@@ -291,7 +318,7 @@ type BaseContent = {
 
   .pages {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
   .page {
@@ -314,6 +341,29 @@ type BaseContent = {
     font-size: 1.1rem;
   }
 
+  .flex-wrapper_illust {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .illust-item {
+    text-align: center; /* テキストと画像を中央揃え */
+  }
+
+  .illust-image {
+    height: 400px; /* 高さを統一 */
+    width: auto; /* アスペクト比を維持 */
+    margin: 0 auto; /* 横幅が不足する場合の自動センタリング */
+    display: block; /* 中央揃えのために必須 */
+    max-width: 100%; /* 親要素に収まるように設定 */
+  }
+
+  .illust-text {
+    padding: 2rem 10rem;
+    white-space: pre-wrap;
+  }
+
   @media (max-width: 768px) {
     .details-grid {
       grid-template-columns: 1fr;
@@ -321,6 +371,10 @@ type BaseContent = {
 
     .details-flex .detail-item {
       flex: 1 1 100%;
+    }
+    .illust-text {
+      padding: 1rem 2rem;
+      white-space: pre-wrap;
     }
   }
 </style>
