@@ -250,7 +250,7 @@
              {"name": "プロジェクト名", "description": "ポートフォリオ"},
              {"name": "目的", "description": "自分のスキル、経験、そして個性を視覚的かつわかりやすく伝えるために制作しました。採用担当者やクライアントに向けた自己紹介と制作物の展示が主な目的です。"},
              {"name": "制作期間", "description": "約1週間"},
-             {"name": "技術スタック", "description": "Figma / コーディングAstro.js /  TypeScript / Vercel"},
+             {"name": "技術スタック", "description": "Figma / Astro.js /  TypeScript / Vercel"},
              {"name": "特徴", "description": "アニメーションを活用し、視覚的なインタラクションを取り入れた動きのあるデザイン。"}
           ]
        },
@@ -276,20 +276,20 @@
           "title": "デザインプロセス",
           "contents": [
              {"name": "各ページデザイン(スクリーンショット)", "pages": [
-                {"page": "記事一覧ページ", "url": "/images/works/capybara-blog/posts.png"},
-                {"page": "記事一覧ページ_管理者", "url": "/images/works/capybara-blog/posts-admin.png"},
-                {"page": "アバウトページ", "url": "/images/works/capybara-blog/about.png"},
-                {"page": "アバウトページ_管理者", "url": "/images/works/capybara-blog/about-admin.png"},
-                {"page": "記事詳細ページ", "url": "/images/works/capybara-blog/post.png"},
-                {"page": "記事詳細ページ_管理者", "url": "/images/works/capybara-blog/post-admin.png"},
-                {"page": "記事作成・編集ページ", "url": "/images/works/capybara-blog/create.png"},
-                {"page": "アバウト編集ページ", "url": "/images/works/capybara-blog/about-edit.png"},
-                {"page": "ログインページ", "url":"/images/works/capybara-blog/login.png"},
-                {"page": "記事一覧ページ_レスポンシブ", "url": "/images/works/capybara-blog/posts-responsive.png"},
-                {"page": "アバウトページ_レスポンシブ", "url": "/images/works/capybara-blog/about-responsive.png"},
-                {"page": "記事詳細ページ_レスポンシブ", "url": "/images/works/capybara-blog/post-responsive.png"},
-                {"page": "記事作成・編集ページ_レスポンシブ", "url": "/images/works/capybara-blog/create-responsive.png"},
-                {"page": "ログインページ_レスポンシブ", "url":"/images/works/capybara-blog/login-responsive.png"}
+                {"page": "トップページ", "url": "/images/works/portfolio/top.png"},
+               
+                {"page": "アバウトページ", "url": "/images/works/portfolio/about.png"},
+             
+                {"page": "ワークスページ", "url": "/images/works/portfolio/works.png"},
+               
+                {"page": "ワークス詳細ページ", "url": "/images/works/portfolio/work.png"},
+                
+                {"page": "トップページ_レスポンシブ", "url": "/images/works/portfolio/top_responsive.png"},
+                {"page": "アバウトページ_レスポンシブ", "url": "/images/works/portfolio/about_responsive.png"},
+                {"page": "ワークスページ_レスポンシブ", "url": "/images/works/portfolio/works_responsive.png"},
+                {"page": "ワークス詳細ページ_レスポンシブ", "url": "/images/works/portfolio/work_responsive.png"},
+                {"page": "ローディング画面", "url": "/images/works/portfolio/loading.png"}
+               
                 ]},
                 {"name": "プロセス", "steps": [
                   {"step": "ワイヤーフレーム作成", "desc": "情報の整理とページ構成を計画し、直感的に操作できるレイアウトを設計。"},
@@ -305,20 +305,29 @@
        {
         "title": "キャラクターデザインとイラスト",
         "content": [
-          {"illust": "アバウトページイラスト", "url": "/images/dona_no_background.png","discription": "トップページのイラストは、自分のイメージキャラクターであるDONAを描きました。"},
-          {"illust": "トップページイラスト", "url": "/images/dona_no_background.png","discription": "トップページのイラストは、自分のイメージキャラクターであるDONAを描きました。"}
+           
+            {
+                "illust": "キャラクターデザイン",
+                "url": "/images/works/portfolio/dona.png",
+                "description": "DONAは、デザインと技術の両面で頑張りたいという私の想いを具現化したキャラクターです。\n衣装には『デザインも技術も』という探求心を示す両矢印のモチーフを取り入れ、胸元の翼は『心の自由』を象徴しています。\nこのキャラクターは、私の未来への希望と挑戦する意志を表現しています。"
+            },
+            {
+              "illust": "トップページイラスト",
+              "url": "/images/dona_main.png",
+              "description": "両手に星を持つ姿は、どんなアイデアでもこぼさず大切に扱うという意志を表現しています。\n背景の星空は無限の可能性と未来への希望を象徴しています。"
+          }
         ]
-       },
+    },    
        {
         "title": "振り返りと成果",
         "content": [
            {"得た学び": [
-              "自分のスキルや強みを伝えるためのポートフォリオ設計・デザイン手法を習得。",
-              "デザインとエンジニアリングの視点を融合させた実践的なプロジェクト管理を経験。"
+              "自分のスキルや強みを伝えるためのポートフォリオ設計・デザイン手法を習得。"
            ]},
            {"今後の課題": [
               "ページ速度のさらなる向上と最適化。",
-              "より詳細なプロジェクト成果の記載。"
+              "より詳細なプロジェクト成果の記載。",
+              "新しいプロジェクトの更新"
            ]}
         ]
      }
