@@ -16,14 +16,14 @@ const { title, shortDescription, thumbnail, tags, link } =
 <div class="work">
   <img src={thumbnail} alt="サムネイル" />
   <div class="right-contents">
-    <h2>{title}</h2>
+    <h3>{shortDescription}</h3>
     <div class="description">
-      <p>{shortDescription}</p>
+      <p>{title}</p>
       <small>
         {tags.map((tag) => <span>{tag}</span>)}
       </small>
     </div>
-    <Button link=`/works/${link}`>詳細を見る</Button>
+    <Button link=`/works/${link}`>詳細をみる</Button>
   </div>
 </div>
 
@@ -33,6 +33,11 @@ const { title, shortDescription, thumbnail, tags, link } =
     justify-content: space-between;
     align-items: center;
     max-width: 990px;
+  }
+
+  h3{
+    text-align: center;
+    margin: 0 2rem;
   }
 
   .work img {

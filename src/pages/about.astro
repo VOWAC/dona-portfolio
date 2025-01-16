@@ -38,23 +38,35 @@ import Layout from "@layouts/Layout.astro";
         <div class="description">
           <p>
             20歳。栃木県出身です。<br
-            />現在、東京デザインテクノロジーセンター専門学校スーパーIT科の3年生として、Webデザインやエンジニアリングを中心に学んでいます。日々の学びを通じて、デザインと技術の力で価値あるものを形にする方法を探求しています。<br
+            />現在、東京デザインテクノロジーセンター専門学校スーパーIT科の3年生として、UI/UX、Webデザインやエンジニアリングを中心に学んでいます。最近では、WebGLの学びを深めたいと考えています。<br
             />
             <br />
-            趣味はイラストや映像制作で、どちらも自己表現の手段として楽しんでいます。物語性や感情を込めた作品作りを大切にしており、その経験がデザインやエンジニアリングにも良い影響を与えていると感じています。
-            『表現することが好き』という思いを軸に、デザインと技術の両面で自分の可能性を広げていきたいと考えています。
+            「DONA」という名前は、デザインやエンジニアリング活動において使用しているハンドルネームです。私が取り組む作品やプロジェクトに一貫性を持たせるために用いており、自身の成長や想いを体現する象徴的な名前として親しんでいます。
+            <br />
+            <br />
+            表現することが好きで、あらゆる表現手段に興味を持ち、学んでいます。特に、趣味はイラストや映像制作で、物語性や感情を込めた作品作りを大切にしています。
           </p>
         </div>
         <!-- visionsection -->
         <div class="vision">
           <h3>デザインと技術の両視点で価値を創りたい</h3>
           <p>
-            私が目指すのは、デザインと技術の両視点から価値あるものを形にできるデザインエンジニアです。<br
+            私が目指すのは、デザインと技術を融合させて価値あるものを形にできるデザインエンジニアです。<br
             />
-            デザイナーとエンジニアの間にある齟齬を解消し、意図を正しく形にするだけでなく、スピーディーで高精度なプロトタイピングを通じて、チーム全体の価値を向上させていきたいと考えています。<br
+            UI/UXデザインやフロントエンドの経験を積みながら、デザイナーとエンジニアの間にある齟齬を解消し、双方の意図を正しく形にしたいと考えています。<br
             />
-            <br />
-            また、私にとってデザインは、色や形、動きでユーザーと会話するコミュニケーションの手段であり、技術はそれを形にする表現力です。両者を融合させることで、より「伝わる」デザインを生み出していきたいと考えています。
+            また、スピーディーで高精度なプロトタイピングを通じて、チーム全体の価値を向上させていきたいとも思っています。<br
+            />
+            最終的には、デザインエンジニアとして、デザインと技術を駆使し、ユーザーに価値のある体験を提供できるプロダクトを作り上げることを目指しています。<br
+            />
+          </p>
+        </div>
+        <div class="product">
+          <h3>人に寄り添ったプロダクトを目指す</h3>
+          <p>
+            私にとってデザインは、色や形、動きでユーザーと会話するコミュニケーションの手段であり、技術はそれを形にする表現力です。<br
+            />
+            クライアントの意図やユーザーのニーズを考慮し、コミュニケーションを通じて課題提起と課題解決を重視したプロダクトを作り、使いやすく価値のある体験を提供したいと考えています。
           </p>
         </div>
         <!-- careersection -->
@@ -62,7 +74,7 @@ import Layout from "@layouts/Layout.astro";
           <h3>経歴</h3>
           <table class="timeline">
             <TimelineItem
-              date="2022/04\n〜\n現在"
+              date="2022/04"
               title="東京デザインテクノロジーセンター専門学校スーパーIT科入学"
               description="本格的にIT知識やアルゴリズム、webデザインを学び始める。色々な言語に触れていく中で、webのフロントエンドに興味を持ち、Web制作、開発やデザイン、UI/UXを中心に学んでいる。"
               arrow
@@ -95,10 +107,10 @@ import Layout from "@layouts/Layout.astro";
           <div class="set">
             <p class="title">スキルセット</p>
             <p class="explanation">
-                スキルレベルについて<br
-                />以下のスキルレベルは3段階で評価しています
+              スキルレベルについて<br
+              />以下のスキルレベルは3段階で評価しています
               <br />
-              ★☆☆:基本的なタスクを独立してこなせる。<br />
+              ★☆☆: 基本的なタスクを独立してこなせる。<br />
               ★★☆: 実務で使用経験あり。<br />
               ★★★: 実務経験豊富、複雑なタスクも対応可能。
             </p>
@@ -109,12 +121,12 @@ import Layout from "@layouts/Layout.astro";
                 <SkillSetItem name="UI/UX開発" rating={2} />
                 <SkillSetItem name="Illustrator" rating={1} />
                 <SkillSetItem name="Photoshop" rating={1} />
-                <SkillSetItem name="Adobe XD" rating={1} />
+                <SkillSetItem name="XD" rating={1} />
               </div>
               <div class="skill-set-item">
                 <p class="title">コーディング関係</p>
                 <SkillSetItem name="HTML/CSS" rating={3} />
-                <SkillSetItem name="TailwindCSS" rating={2} />
+                <SkillSetItem name="Tailwind CSS" rating={2} />
                 <SkillSetItem name="TypeScript" rating={2} />
                 <SkillSetItem name="React" rating={3} />
                 <SkillSetItem name="Next.js" rating={2} />
@@ -256,6 +268,7 @@ import Layout from "@layouts/Layout.astro";
     gap: 3rem;
     overflow-y: auto;
     margin-left: 50%;
+    background-color: #fff;
   }
   .right-content h3 {
     margin-bottom: 2rem;
@@ -323,6 +336,11 @@ import Layout from "@layouts/Layout.astro";
   }
 
   /* レスポンシブ */
+  @media screen and (max-width: 1400px) {
+    .left-content {
+      left: 5%;
+    }
+  }
   @media screen and (max-width: 1024px) {
     .about-contents {
       flex-direction: column;
@@ -349,12 +367,12 @@ import Layout from "@layouts/Layout.astro";
       padding: 1rem 2rem;
     }
 
-    .description,
+    /* .description,
     .vision,
     .career,
     .skill {
       text-align: center;
-    }
+    } */
 
     .skill .set {
       padding: 1rem;

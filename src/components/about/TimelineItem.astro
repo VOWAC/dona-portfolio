@@ -7,7 +7,6 @@ const { date, title, description, arrow } = Astro.props;
     <td class="date">
       <p>{date}</p>
     </td>
-    {arrow && <td class="arrow" rowspan="5" />}
     <td class="event">
       <p class="title">
         {title}
@@ -53,7 +52,9 @@ const { date, title, description, arrow } = Astro.props;
   @media (max-width: 1024px) {
     .date {
       opacity: 0.5;
-      width: 30%;
+      width: 10%;
+      text-align: left;
+      padding-right: 4rem;
     }
   }
 </style>
