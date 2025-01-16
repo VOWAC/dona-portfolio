@@ -234,82 +234,94 @@
         ]
       }
     ]
-  }, 
-    {
-      "id": 3,
-      "name": "学校文化祭のフロア案内サイト",
-      "shortDescription": "TCA東京ECO動物海洋専門学校文化祭",
-      "tags": ["チーム開発", "デザイン"],
-      "link": "tca-eco-school-festival",
-      "url": "https://tca-eco-school-festival.vercel.app/?v=1",
-      "thumbnail": "/images/works/tca-eco-school-festival.png",
-      "details": [
-        {
+  }, {
+    "id": 4,
+    "name": "ポートフォリオ",
+    "shortDescription": "DONAのポートフォリオサイト",
+    "tags": ["個人開発", "デザイン", "コーディング"],
+    "link": "portfolio",
+    "url": "https://dona-omega.vercel.app/",
+    "github": "https://github.com/VOWAC/dona-portfolio",
+    "thumbnail": "/images/works/portfolio.png",
+    "sections": [
+       {
           "title": "プロジェクト概要",
-          "description": "TCA東京ECO動物海洋専門学校文化祭のフロア案内サイトを制作しました。来場者が学校内の各展示フロアをスムーズに把握できることを目的としています。"
-        },
-        {
-          "title": "制作の背景と目的",
-          "description": "通っている学校の姉妹校から文化祭を訪れる来場者が効率よくフロアを巡るため、デザインと利便性に配慮した案内サイトを提案・制作しました。"
-        },
-        {
-          "title": "担当した部分の技術スタック",
-          "description": "デザイン: Figma"
-        },
-        {
-          "title": "成長と学び",
-          "description": "文化祭の案内サイトでは、依頼者とのやり取りを重ね、具体的なフィードバックを受ける経験を初めてしました。要望を形にし、柔軟に対応する力が求められたことで、クライアントとの連携の重要性を学びました。"
-        },{
-          "title": "作品に対して",
-          "description": ""
-        }
-      ],
-      "designScreenshots": "/images/works/tca-eco-school-festival-design.png",
-      "designChanges": []
+          "contents": [
+             {"name": "プロジェクト名", "description": "ポートフォリオ"},
+             {"name": "目的", "description": "自分のスキル、経験、そして個性を視覚的かつわかりやすく伝えるために制作しました。採用担当者やクライアントに向けた自己紹介と制作物の展示が主な目的です。"},
+             {"name": "制作期間", "description": "約1週間"},
+             {"name": "技術スタック", "description": "Figma / コーディングAstro.js /  TypeScript / Vercel"},
+             {"name": "特徴", "description": "アニメーションを活用し、視覚的なインタラクションを取り入れた動きのあるデザイン。"}
+          ]
+       },
+       {
+        "title": "制作の背景とテーマ",
+        "contents": [
+            {"name": "背景", "description": "自身のスキルと経験を包括的に表現する場としてポートフォリオサイトを制作しました"},
+            {"name": "テーマ", "description": "星空をテーマにしたデザインで、自分のアイデアやスキルを星々に見立て、無限の可能性を表現しました。"}
+        ]
     },
-    {
-      "id": 4,
-      "name": "ポートフォリオ",
-      "shortDescription": "DONAのポートフォリオサイト",
-      "tags": ["個人開発", "デザイン", "コーディング"],
-      "link": "portfolio",
-      "url": "https://dona-omega.vercel.app/",
-      "github": "https://github.com/VOWAC/dona-portfolio",
-      "thumbnail": "/images/works/portfolio.png",
-      "details": [
-        {
-          "title": "プロジェクト概要",
-          "description": "自己紹介と作品を掲載するためのポートフォリオサイトです。"
-        },
-        {
-          "title": "制作の背景と目的",
-          "description": "自身のスキルや制作物をアピールするため、ポートフォリオサイトを制作しました。"
-        },
-        {
-          "title": "技術スタック",
-          "description": "デザイン: Figma、コーディング: TypeScript, Astro.js、デプロイ: Vercel"
-        },
-        {
-          "title": "ポートフォリオのテーマ",
-          "description": "テーマは星空で、無数のアイデアを星々に見立てて表現しました。自分の好きな世界観をデザインに落とし込み、個性を感じられる仕上がりを目指しました。"
-        },
-        {
-          "title": "成長と学び",
-          "description": "デザイン全体に統一感を持たせることの重要性を学び、今後の制作にも活かしていきたいと考えています。"
-        },
-        {
-          "title": "課題",
-          "description": "デザイン要素の微調整や、コードの再利用性を高める取り組みが課題として残っています。"
-        },
-        {
-          "title": "制作期間",
-          "description": "約1週間です。"
-        },
-        {
-          "title": "作品に対して",
-          "description": "自分のスキルや作品を視覚的にアピールできる場を持てたことは大きな成果です。今後も継続的に更新し、自身の成長を反映していきたいです。"
-        }
-      ]
-    }
-  
+       {
+        "title": "調査・要望分析",
+        "contents": [
+           {"name": "リサーチ対象", "items": ["優れたデザインポートフォリオ", "エンジニアリングポートフォリオ"]},
+           {"name": "ポイント", "items": [
+              "トップページで視覚的にインパクトを与えるデザインを採用。",
+              "閲覧者がスムーズに必要な情報を探せるシンプルなナビゲーション設計。",
+              "作品ページでは各プロジェクトの背景や成果を詳細に記載。"
+           ]}
+        ]
+     },
+       {
+          "title": "デザインプロセス",
+          "contents": [
+             {"name": "各ページデザイン(スクリーンショット)", "pages": [
+                {"page": "記事一覧ページ", "url": "/images/works/capybara-blog/posts.png"},
+                {"page": "記事一覧ページ_管理者", "url": "/images/works/capybara-blog/posts-admin.png"},
+                {"page": "アバウトページ", "url": "/images/works/capybara-blog/about.png"},
+                {"page": "アバウトページ_管理者", "url": "/images/works/capybara-blog/about-admin.png"},
+                {"page": "記事詳細ページ", "url": "/images/works/capybara-blog/post.png"},
+                {"page": "記事詳細ページ_管理者", "url": "/images/works/capybara-blog/post-admin.png"},
+                {"page": "記事作成・編集ページ", "url": "/images/works/capybara-blog/create.png"},
+                {"page": "アバウト編集ページ", "url": "/images/works/capybara-blog/about-edit.png"},
+                {"page": "ログインページ", "url":"/images/works/capybara-blog/login.png"},
+                {"page": "記事一覧ページ_レスポンシブ", "url": "/images/works/capybara-blog/posts-responsive.png"},
+                {"page": "アバウトページ_レスポンシブ", "url": "/images/works/capybara-blog/about-responsive.png"},
+                {"page": "記事詳細ページ_レスポンシブ", "url": "/images/works/capybara-blog/post-responsive.png"},
+                {"page": "記事作成・編集ページ_レスポンシブ", "url": "/images/works/capybara-blog/create-responsive.png"},
+                {"page": "ログインページ_レスポンシブ", "url":"/images/works/capybara-blog/login-responsive.png"}
+                ]},
+                {"name": "プロセス", "steps": [
+                  {"step": "ワイヤーフレーム作成", "desc": "情報の整理とページ構成を計画し、直感的に操作できるレイアウトを設計。"},
+                  {"step": "デザイン", "desc": "星空をテーマに柔らかいトーンの色彩を採用し、夜空の雰囲気を強調。"},
+                  {"step": "UI要素", "desc": [
+                      "アニメーションを活用し、スクロール時に要素が現れる演出を実装。",
+                      "ボタンやリンクにホバーエフェクトを追加し、操作性を向上。"
+                  ]}
+              ]}
+             
+          ]
+       },
+       {
+        "title": "キャラクターデザインとイラスト",
+        "content": [
+          {"illust": "アバウトページイラスト", "url": "/images/dona_no_background.png","discription": "トップページのイラストは、自分のイメージキャラクターであるDONAを描きました。"},
+          {"illust": "トップページイラスト", "url": "/images/dona_no_background.png","discription": "トップページのイラストは、自分のイメージキャラクターであるDONAを描きました。"}
+        ]
+       },
+       {
+        "title": "振り返りと成果",
+        "content": [
+           {"得た学び": [
+              "自分のスキルや強みを伝えるためのポートフォリオ設計・デザイン手法を習得。",
+              "デザインとエンジニアリングの視点を融合させた実践的なプロジェクト管理を経験。"
+           ]},
+           {"今後の課題": [
+              "ページ速度のさらなる向上と最適化。",
+              "より詳細なプロジェクト成果の記載。"
+           ]}
+        ]
+     }
+    ]
+  }
 ]
