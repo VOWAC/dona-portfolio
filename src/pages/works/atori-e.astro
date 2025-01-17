@@ -29,7 +29,7 @@ if (!work) {
       <section id="details">
         <div class="details-flex">
           {
-            work.details.map((detail) => (
+            work.details?.map((detail) => (
               <div class="detail-item">
                 <h3>{detail.title}：</h3>
                 <p>{detail.description}</p>
