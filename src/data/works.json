@@ -91,66 +91,7 @@
         ]
      }
   ]
-}, 
-  {
-    "id": 2,
-    "name": "AtoriE",
-    "shortDescription": "自分のイラストサイト",
-    "tags": ["個人開発", "デザイン", "コーディング"],
-    "link": "atori-e",
-    "url": "https://atorie.netlify.app/",
-    "github": "https://github.com/VOWAC/AtoriE",
-    "thumbnail": "/images/works/atorie.png",
-    "details": [
-      {
-        "title": "プロジェクト概要",
-        "description": "「AtoriE」は、趣味であるイラストを固定で展示するための作品展として制作しました。名前は「冬隣あとり」という名義と「絵」、さらに「工房」を意味する「アトリエ」を組み合わせたものです。"
-      },
-      {
-        "title": "制作の背景と目的",
-        "description": "これまでたくさん絵を描いてきたものの、固定で掲載できる場所がありませんでした。その課題を解決するため、自分専用の作品置き場として立ち上げました。"
-      },
-      {
-        "title": "技術スタック",
-        "description": "デザイン: Figma、フロントエンド: Astro.js, TypeScript、データベース: Supabase、デプロイ: Netlify。Next.jsも検討しましたが、軽量かつ高速な構成を選ぶため、Astro.jsを採用しました。"
-      },
-      {
-        "title": "成功したポイント",
-        "description": "滑らかなスクロールの実装に成功し、閲覧体験を向上させました。また、メイソンリーレイアウトを用いて、絵を魅力的に配置しました。"
-      },
-      {
-        "title": "成長と学び",
-        "description": "JavaScriptをレイアウトに活用することへの抵抗がなくなり、スクリプトとレイアウトの調整に慣れました。"
-      },
-      {
-        "title": "課題",
-        "description": "Google以外のブラウザでレイアウトが崩れることがあり、特にSafariでの調整が課題となっています。また、さらなる改善が必要です。"
-      },
-      {
-        "title": "制作期間",
-        "description": "約2週間の稼働期間ですが、計画や一時停止を含めると2か月程度かかりました。"
-      },
-      {
-        "title": "作品に対して",
-        "description": "「AtoriE」は、私が描いたイラストをより魅力的に見せるための特別な空間です。試行錯誤しながら、絵を最大限に引き立てるデザインを目指しました。"
-      }
-    ],
-    "designScreenshots": "/images/works/atorie-design.png",
-    "designChanges": [
-      {
-        "change": "ハンバーガーメニューの削除",
-        "designConcept": "他のギャラリーページへのアクセスを容易にするため、ハンバーガーメニューを用意していました。",
-        "implementationChanges": "ギャラリーごとのdescriptionに集中してほしいという意図から、ハンバーガーメニューを削除し、下部に他のページへのリンクを設置しました。",
-        "reason": "各ギャラリーを深く楽しんでもらうための配慮です。"
-      },
-      {
-        "change": "詳細ページの情報追加",
-        "designConcept": "絵を一覧で表示するシンプルなレイアウトを想定していました。",
-        "implementationChanges": "絵の詳細ページにタイトルや概要を追加し、合作の場合には合作相手のリンクも掲載しました。",
-        "reason": "各作品の背景や意味を伝えることで、より深い鑑賞体験を提供したいと考えたためです。"
-      }
-    ]
-  },{
+}, {
     "id": 3,
     "name": "学校文化祭のフロア案内サイト",
     "shortDescription": "TCA東京ECO動物海洋専門学校文化祭",
@@ -331,6 +272,64 @@
            ]}
         ]
      }
+    ]
+  }, {
+    "id": 2,
+    "name": "AtoriE",
+    "shortDescription": "自分のイラストサイト",
+    "tags": ["個人開発", "デザイン", "コーディング"],
+    "link": "atori-e",
+    "url": "https://atorie.netlify.app/",
+    "github": "https://github.com/VOWAC/AtoriE",
+    "thumbnail": "/images/works/atorie.png",
+    "details": [
+      {
+        "title": "プロジェクト概要",
+        "description": "「AtoriE」は、趣味であるイラストを固定で展示するための作品展として制作しました。名前は「冬隣あとり」という名義と「絵」、さらに「工房」を意味する「アトリエ」を組み合わせたものです。"
+      },
+      {
+        "title": "制作の背景と目的",
+        "description": "これまでたくさん絵を描いてきたものの、固定で掲載できる場所がありませんでした。その課題を解決するため、自分専用の作品置き場として立ち上げました。"
+      },
+      {
+        "title": "技術スタック",
+        "description": "デザイン: Figma、フロントエンド: Astro.js, TypeScript、データベース: Supabase、デプロイ: Netlify。Next.jsも検討しましたが、軽量かつ高速な構成を選ぶため、Astro.jsを採用しました。"
+      },
+      {
+        "title": "成功したポイント",
+        "description": "滑らかなスクロールの実装に成功し、閲覧体験を向上させました。また、メイソンリーレイアウトを用いて、絵を魅力的に配置しました。"
+      },
+      {
+        "title": "成長と学び",
+        "description": "JavaScriptをレイアウトに活用することへの抵抗がなくなり、スクリプトとレイアウトの調整に慣れました。"
+      },
+      {
+        "title": "課題",
+        "description": "Google以外のブラウザでレイアウトが崩れることがあり、特にSafariでの調整が課題となっています。また、さらなる改善が必要です。"
+      },
+      {
+        "title": "制作期間",
+        "description": "約2週間の稼働期間ですが、計画や一時停止を含めると2か月程度かかりました。"
+      },
+      {
+        "title": "作品に対して",
+        "description": "「AtoriE」は、私が描いたイラストをより魅力的に見せるための特別な空間です。試行錯誤しながら、絵を最大限に引き立てるデザインを目指しました。"
+      }
+    ],
+    "designScreenshots": "/images/works/atorie-design.png",
+    "designChanges": [
+      {
+        "change": "ハンバーガーメニューの削除",
+        "designConcept": "他のギャラリーページへのアクセスを容易にするため、ハンバーガーメニューを用意していました。",
+        "implementationChanges": "ギャラリーごとのdescriptionに集中してほしいという意図から、ハンバーガーメニューを削除し、下部に他のページへのリンクを設置しました。",
+        "reason": "各ギャラリーを深く楽しんでもらうための配慮です。"
+      },
+      {
+        "change": "詳細ページの情報追加",
+        "designConcept": "絵を一覧で表示するシンプルなレイアウトを想定していました。",
+        "implementationChanges": "絵の詳細ページにタイトルや概要を追加し、合作の場合には合作相手のリンクも掲載しました。",
+        "reason": "各作品の背景や意味を伝えることで、より深い鑑賞体験を提供したいと考えたためです。"
+      }
     ]
   }
 ]
