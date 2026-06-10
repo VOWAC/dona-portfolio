@@ -54,6 +54,7 @@ import InductionSection from "@components/top/InductionSection.astro";
     object-position: 17% 0;
   }
 
+  /* 星空を活かしつつ、左のキャラ足元と右のタイトル背後だけ軽く締める scrim */
   .main::after {
     content: "";
     position: absolute;
@@ -61,7 +62,15 @@ import InductionSection from "@components/top/InductionSection.astro";
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 6, 15, 0.35) 0%,
+        rgba(5, 6, 15, 0) 30%,
+        rgba(5, 6, 15, 0) 58%,
+        rgba(5, 6, 15, 0.45) 100%
+      ),
+      linear-gradient(180deg, rgba(5, 6, 15, 0) 55%, rgba(5, 6, 15, 0.5) 100%);
     z-index: 1;
     pointer-events: none;
   }
