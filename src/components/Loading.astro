@@ -1,90 +1,180 @@
+---
+/**
+ * 星空テーマのローディング画面。
+ * 深宇宙のグラデーション上で星座がきらめき、準備完了でフェードアウトする。
+ * - window load / 星空背景の準備完了 / 6秒の安全タイマー のいずれかで解除
+ * - prefers-reduced-motion ではアニメーションを抑制
+ */
+---
+
+<div class="loading-overlay" id="loading-screen">
+  <div class="constellation">
+    <span class="orbit"></span>
+    <span class="star star-main"></span>
+    <span class="star star-a"></span>
+    <span class="star star-b"></span>
+    <span class="star star-c"></span>
+  </div>
+  <p class="loading-word">DONA's Portfolio</p>
+  <p class="loading-sub">星空を準備しています…</p>
+</div>
+
 <style>
   .loading-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-text-primary);
+    inset: 0;
+    z-index: 9999;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    flex-direction: column;
-    gap: 3rem;
+    gap: 2.2rem;
     text-align: center;
     color: #fff2ad;
-  }
-  
-  .hide {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+    background:
+      radial-gradient(900px 700px at 70% 22%, rgba(91, 63, 140, 0.4), transparent 60%),
+      radial-gradient(800px 800px at 22% 78%, rgba(39, 70, 144, 0.45), transparent 60%),
+      linear-gradient(180deg, #05060f 0%, #0a0e23 45%, #0f1d3e 100%);
+    transition:
+      opacity 0.9s ease-out,
+      visibility 0.9s ease-out;
   }
 
-  .star-spinner {
-    width: 100px;
-    height: 100px;
+  .loading-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .constellation {
     position: relative;
+    width: 120px;
+    height: 120px;
+  }
+
+  .orbit {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(223, 232, 255, 0.25);
+    border-radius: 50%;
+    animation: orbit-spin 6s linear infinite;
+  }
+  .orbit::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #dfe8ff;
+    box-shadow: 0 0 10px 3px rgba(155, 184, 255, 0.8);
+    transform: translateX(-50%);
   }
 
   .star {
-    width: 100px;
-    height: 100px;
+    position: absolute;
     background-color: #fff2ad;
     clip-path: polygon(
-      50% 0%,
-      61% 35%,
-      98% 35%,
-      68% 57%,
-      79% 91%,
-      50% 70%,
-      21% 91%,
-      32% 57%,
-      2% 35%,
-      39% 35%
+      50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+      50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
     );
-    position: absolute;
-    top: 0;
-    left: -50px;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    animation: spin-swing 2.9s cubic-bezier(0.33, 1, 0.68, 1) infinite;
-    animation-delay: 1s;
-  }
-  .star-small{
-    width: 20px;
-    height: 20px;
-    left: 50px;
-    top: 100px;
-    rotate: 45deg;
+    filter: drop-shadow(0 0 6px rgba(255, 242, 173, 0.8));
   }
 
-  @keyframes spin-swing {
-    0% {
-      transform: rotate(0deg);
-    }
-    20% {
-      transform: rotate(-10deg);
-    }
-    100% {
+  .star-main {
+    width: 46px;
+    height: 46px;
+    top: 37px;
+    left: 37px;
+    animation: twinkle 2.4s ease-in-out infinite;
+  }
+  .star-a {
+    width: 14px;
+    height: 14px;
+    top: 6px;
+    left: 84px;
+    animation: twinkle 1.8s ease-in-out infinite 0.3s;
+  }
+  .star-b {
+    width: 10px;
+    height: 10px;
+    top: 92px;
+    left: 14px;
+    animation: twinkle 2.1s ease-in-out infinite 0.7s;
+  }
+  .star-c {
+    width: 8px;
+    height: 8px;
+    top: 80px;
+    left: 96px;
+    animation: twinkle 1.6s ease-in-out infinite 1s;
+  }
+
+  .loading-word {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    color: #fff;
+    opacity: 0.95;
+  }
+  .loading-sub {
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    color: rgba(223, 232, 255, 0.7);
+    animation: breathe 2.4s ease-in-out infinite;
+  }
+
+  @keyframes orbit-spin {
+    to {
       transform: rotate(360deg);
+    }
+  }
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      opacity: 0.55;
+      transform: scale(0.85) rotate(8deg);
+    }
+  }
+  @keyframes breathe {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.9;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .orbit,
+    .star,
+    .loading-sub {
+      animation: none;
     }
   }
 </style>
 
-<div class="loading-overlay" id="loading-screen">
-  <div class="star-spinner">
-    <div class="star"></div>
-    <div class="star star-small"></div>
-  </div>
-  <p>Loading now ... ✨</p>
-</div>
-
 <script>
-  window.addEventListener("load", () => {
-    const loadingScreen = document.getElementById("loading-screen");
-    loadingScreen?.classList.add("hide");
-  });
+  import { onSpaceReady } from "@lib/space/instance";
+
+  const screen = document.getElementById("loading-screen");
+  let hidden = false;
+  const hide = () => {
+    if (hidden) return;
+    hidden = true;
+    screen?.classList.add("hide");
+  };
+
+  // 準備完了の合図（いずれか早いもの）でフェードアウト
+  if (document.readyState === "complete") {
+    setTimeout(hide, 400);
+  } else {
+    window.addEventListener("load", () => setTimeout(hide, 400));
+  }
+  // 星空背景が描画開始したら隠す（トップページ）
+  onSpaceReady(() => setTimeout(hide, 300));
+  // 念のための安全タイマー（何かが詰まっても必ず解除）
+  setTimeout(hide, 6000);
 </script>
