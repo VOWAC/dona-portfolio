@@ -7,7 +7,9 @@ import InductionSection from "@components/top/InductionSection.astro";
 
 <script>
   import { initPointerParallax } from "@lib/parallax/pointerParallax";
+  import { initSmoothScroll } from "@lib/scroll/smoothScroll";
   initPointerParallax();
+  initSmoothScroll();
 
   // 検証用: ?debug のときだけ合成ポインタを流し、カーソル/視差を可視化
   if (new URLSearchParams(location.search).has("debug")) {
