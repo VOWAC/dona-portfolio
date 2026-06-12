@@ -13,7 +13,7 @@ const { title, shortDescription, thumbnail, tags, link } =
   Astro.props as WorksCardProps;
 ---
 
-<div class="work">
+<div class="work" data-reveal>
   <img src={thumbnail} alt="サムネイル" />
   <div class="right-contents">
     <h3>{shortDescription}</h3>

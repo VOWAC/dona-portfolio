@@ -4,8 +4,9 @@
   --color-secondary: #b9a0cb;
   --background-image: url('/images/background.png'); 
   --background-image-light: url('/images/background-light.png'); 
-  --color-link: #004492;
-  --color-link-hover: #0077ff;
+  /* 既定は星空（暗背景）向けの明色。白カード上は個別に上書きする。 */
+  --color-link: #9bb8ff;
+  --color-link-hover: #fff2ad;
 }
 
 html {
@@ -73,11 +74,26 @@ a:hover {
   color: var(--color-link-hover);
 }
 
+/* 内部ページの内容を載せる、星空に浮かぶ半透明ダークの「グラスパネル」 */
 .container {
-  margin: 8rem auto;
-  padding: 0 1rem;
-  max-width: 1200px;
-  min-height: 100vh;
+  margin: 7rem auto 4rem;
+  padding: 2.5rem clamp(1.2rem, 4vw, 3rem);
+  max-width: 1100px;
+  min-height: 60vh;
+  background: rgba(10, 14, 35, 0.55);
+  border: 1px solid rgba(155, 184, 255, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* グラスパネル内のリンクは明色で */
+.container a {
+  color: #9bb8ff;
+}
+.container a:hover {
+  color: #fff2ad;
 }
 
 .star-background{

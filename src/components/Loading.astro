@@ -167,6 +167,9 @@
     screen?.classList.add("hide");
   };
 
+  // 検証用: ?debug のときは即時解除
+  if (new URLSearchParams(location.search).has("debug")) hide();
+
   // 準備完了の合図（いずれか早いもの）でフェードアウト
   if (document.readyState === "complete") {
     setTimeout(hide, 400);
